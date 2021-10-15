@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on The Droid Blog</title>
+    <link>https://arjdroid.github.io/page/</link>
+    <description>Recent content in Pages on The Droid Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 23 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://arjdroid.github.io/about/</link>
+      <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://arjdroid.github.io/about/</guid>
+      <description>About Me I am Arjun, the maker/owner of this blog. I like almost all things computer related, and I am a big fan of open-source technologies. I also like other things like playing videogames, doing sports, eating good food, travelling, reading, taking photos and hanging out with friends!
+My Favourite Foods (All Vegetarian) and Videogames     Foods Videogames     Pizza Minecraft   Ramen - with Tofu Brawl Stars   Pasta Halo (Entire Series)   Burgers Forza Horizon (Entire Series)     About The Website This website was built using Hugo, a powerful and fast open-source engine for building great static HTML websites.</description>
+    </item>
+    
+    <item>
+      <title>Archives</title>
+      <link>https://arjdroid.github.io/archives/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://arjdroid.github.io/archives/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

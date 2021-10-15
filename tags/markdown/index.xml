@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>markdown on The Droid Blog</title>
+    <link>https://arjdroid.github.io/tags/markdown/</link>
+    <description>Recent content in markdown on The Droid Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 2001 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>https://arjdroid.github.io/p/markdown-syntax-guide/</link>
+      <pubDate>Mon, 01 Jan 2001 00:00:00 +0000</pubDate>
+      
+      <guid>https://arjdroid.github.io/p/markdown-syntax-guide/</guid>
+      <description>This article, which was inscribed on what is known to be a scripture from the beginning of the Gregorian Calendar Time, offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme. It also serves the purpose of showing off how advanced and beautiful my website is.
+Headings The following HTML &amp;lt;h1&amp;gt;—&amp;lt;h6&amp;gt; elements represent six levels of section headings.</description>
+    </item>
+    
+  </channel>
+</rss>

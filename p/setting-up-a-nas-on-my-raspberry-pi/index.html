@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <link rel="icon" type="image/png" href="/favicon/favicon.png">
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='This blog post details the steps I took in setting up a N.A.S on my Raspberry Pi.'><title>Setting up a NAS on my Raspberry Pi</title>
+
+    <link rel='canonical' href='https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/'>
+
+<link rel="stylesheet" href="/scss/style.min.css">
+<meta property='og:title' content='Setting up a NAS on my Raspberry Pi'>
+<meta property='og:description' content='This blog post details the steps I took in setting up a N.A.S on my Raspberry Pi.'>
+<meta property='og:url' content='https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/'>
+<meta property='og:site_name' content='The Droid Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='raspberrypi' /><meta property='article:tag' content='networking' /><meta property='article:published_time' content='2020-10-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-10-23T00:00:00&#43;00:00'/><meta property='og:image' content='https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas.jpg' />
+<meta name="twitter:title" content="Setting up a NAS on my Raspberry Pi">
+<meta name="twitter:description" content="This blog post details the steps I took in setting up a N.A.S on my Raspberry Pi."><meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content='https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas.jpg' /></head>
+<body class="">
+        <div class="container flex on-phone--column align-items--flex-start extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+
+                
+                    
+                    <img src="/img/avatar_hu99862c33b9e1069572ca594846bf10a3_832614_300x300_resize_q75_box.jpg" width="300"
+                        height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+
+                <span class="emoji">🖥️</span>
+            </figure>
+        
+        <h1 class="site-name"><a href="https://arjdroid.github.io">The Droid Blog</a></h1>
+        <h2 class="site-description">Computer Wizard In Training</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='https://arjdroid.github.io/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://arjdroid.github.io/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://arjdroid.github.io/archives'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://arjdroid.github.io/p/rss'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                
+                <span>RSS</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://arjdroid.github.io/podcast'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+      <clipPath id="keep-top-half-of-circle">
+        <rect x="0" y="0" width="24" height="5" />
+      </clipPath>
+      <clipPath id="keep-left-part-of-rectangle">
+        <rect x="0" y="0" width="8" height="16" />
+      </clipPath>
+      <clipPath id="keep-right-part-of-rectangle">
+        <rect x="16" y="0" width="7" height="16" />
+      </clipPath>
+      <clipPath id="keep-bottom-half-of-circle">
+          <rect x="0" y="12" width="24" height="12" />
+      </clipPath>
+      <clipPath id="keep-left-part-of-big-rectangle">
+          <rect x="0" y="0" width="5" height="24" />
+      </clipPath>
+      <clipPath id="keep-right-part-of-big-rectangle">
+          <rect x="16" y="0" width="7" height="24" />
+      </clipPath>
+  </defs>
+
+  <circle cx="12" cy="6" r="5" clip-path="url(#keep-top-half-of-circle)" />
+  <rect x="7" y="5" width="10" height="7" clip-path="url(#keep-left-part-of-rectangle)" stroke-linecap="square" stroke-linejoin="square" />
+  <rect x="7" y="5" width="10" height="7" clip-path="url(#keep-right-part-of-rectangle)" stroke-linecap="square" stroke-linejoin="square" />
+  <circle cx="12" cy="12" r="5" clip-path="url(#keep-bottom-half-of-circle)" />
+  <line x1="8" y1="6" x2="9.5" y2="6" />
+  <line x1="8" y1="9" x2="9.5" y2="9" />
+  <line x1="8" y1="12" x2="9.5" y2="12" />
+  <line x1="17" y1="6" x2="14.5" y2="6" />
+  <line x1="17" y1="9" x2="14.5" y2="9" />
+  <line x1="17" y1="12" x2="14.5" y2="12" />
+  <circle cx="12" cy="12" r="8" clip-path="url(#keep-bottom-half-of-circle)" />
+  <line x1="4" y1="12" x2="4" y2="8" />
+  <line x1="20" y1="12" x2="20" y2="8" />
+  <line x1="12" y1="20" x2="12" y2="24" />
+  <line x1="6" y1="24" x2="18" y2="24" />
+</svg>
+
+                
+                <span>Podcast</span>
+            </a>
+        </li>
+        
+    </ol>
+</aside>
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://arjdroid.github.io" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <img srcset="/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas_hu227b61606f8d971d1f6c07b446f98099_3382114_1024x0_resize_q75_box.jpg 1024w, /p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas_hu227b61606f8d971d1f6c07b446f98099_3382114_2000x0_resize_q75_box.jpg 2000w"
+                    src="/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas_hu227b61606f8d971d1f6c07b446f98099_3382114_2000x0_resize_q75_box.jpg" width="4608" height="3456" loading="lazy"
+                    alt="Featured image of post Setting up a NAS on my Raspberry Pi" />
+            
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="https://arjdroid.github.io/categories/raspberrypi/" 
+                    class="color-tag"
+                    data-image="/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas_hu227b61606f8d971d1f6c07b446f98099_3382114_20x20_fill_q75_box_smart1.jpg" 
+                    data-key="" 
+                    data-hash="md5-TntvWSGMtRFzq9EI78Iqbg==">
+                    raspberrypi
+                </a>
+            
+        
+            <a href="https://arjdroid.github.io/categories/networking/" 
+                    class="color-tag"
+                    data-image="/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas_hu227b61606f8d971d1f6c07b446f98099_3382114_20x20_fill_q75_box_smart1.jpg" 
+                    data-key="" 
+                    data-hash="md5-TntvWSGMtRFzq9EI78Iqbg==">
+                    networking
+                </a>
+            
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/">Setting up a NAS on my Raspberry Pi</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        This blog post details the steps I took in setting up a N.A.S on my Raspberry Pi.
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Oct 23, 2020</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <blockquote>
+<p><strong>Disclaimer</strong>: If you plan on using this article as a guide for setting up your OWN raspberry pi nas (which I hope you do 😁), <strong>PLEASE</strong> read the entire article before going through with this process (It will help clear any doubts you have as well as ensure that you can go through with this process). Also, do remember that <strong>I AM NOT RESPONSIBLE</strong> for any damage that YOU may cause to yourself or your own hardware including, but not limited to: bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed. YOU are choosing to make these modifications, and if you point the finger at me for messing up your hardware, I will laugh at you. All jokes aside though, this process is pretty solid, and shouldn&rsquo;t break anything unless you <em>seriously</em> mess it up.</p>
+</blockquote>
+<h2 id="introduction">Introduction</h2>
+<p>So, this project all started when my old faithful Windows PC started giving up so I had to temporarily work from my Macbook.
+It was fine for the most part except that I didn&rsquo;t have access to most of the files on my 2 Terrabyte hard drive, that was a real problem because those files would&rsquo;ve saved me a lot of time&hellip;</p>
+<p>So, my father and I decided to setup a N.A.S!</p>
+<p>Easy right? Not really&hellip;</p>
+<p>There are a lot of options in terms of N.A.S storage devices, you could buy one of those pre-configured N.A.S boxes with their propreitary software and hardware which, if they break, you&rsquo;re out of luck, they&rsquo;re also often times really expensive!
+So, what better alternative to closed sources and proprietary hardware than to use open source!
+Enter: Raspberry Pi; a tiny credit card sized fully functioning computer that is great for D.I.Y projects.
+So it was decided that the Raspberry Pi4 would be the brains of the operation, N.A.S operation, at least at this small scale, isn&rsquo;t a really compute heavy process so we decreed that a 2GB Model of the Raspberry Pi4 would be sufficient for the task.</p>
+<blockquote>
+<h3 id="prerequisites">Prerequisites:</h3>
+<ul>
+<li>A working Raspberry Pi (Any Version), with all of it&rsquo;s required hardware like microSD card, USB power brick, etc.</li>
+<li>Some sort of mass storage device (Like an HDD or SSD or USB Flash Drive, etc.)</li>
+<li>A working brain</li>
+</ul>
+</blockquote>
+<h2 id="raspberry-pi-setup">Raspberry Pi Setup</h2>
+<p>So, the first thing we had to do was configure the Raspberry Pi4, it was pretty simple, we had a 16GB microSD card and we flashed Raspberry Pi OS onto it (that&rsquo;s what they call Raspbian now) and we attached it to a TV with a keyboard and mouse as well as an Ethernet connection to our router and configured Raspberry Pi OS with all the usual stuff;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo raspi-config
+</code></pre></div><p>And viola! A pseudo command-line text-based G.U.I appears which allows you to configure most of the Raspberry Pi&rsquo;s settings with arrow keys, a spacebar and an enter key. I&rsquo;m skipping the configuration part;</p>
+<blockquote>
+<h3 id="if-you-dont-know-how-to-configure-your-raspberry-pi">If you don&rsquo;t know how to configure your Raspberry Pi:</h3>
+<p>I highly recommend that you check out <strong><a class="link" href="https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up"  target="_blank" rel="noopener"
+    >this</a></strong> article by the raspberrypi foundation about setting up your Pi, it will be greatly helpful!</p>
+</blockquote>
+<h2 id="hard-drive-configuration">Hard Drive Configuration</h2>
+<p>Now, all we have got to do is connect to it via SSH; (<strong>THIS IS ONLY IF YOU DO NOT HAVE A KEYBOARD AND MOUSE AND MONITOR CONNECTED TO THE PI, IF YOU DO HAVE THEM CONNECTED, SKIP THE SSH STEP, YOU CAN PERFORM ALL YOUR COMMANDS ON THE TERMINAL APP IN THE PI</strong>)</p>
+<p>On your own laptop/desktop terminal:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ssh username@ipa.ddr.ess.opi
+</code></pre></div><p>Remember to replace <code>username</code> with your pi&rsquo;s username, most of the time it&rsquo;ll be <code>pi</code> and replace <code>ipa.ddr.ess.opi</code> with the ip address of your pi, it&rsquo;ll look something like this, <code>192.168.1.180</code>, to be sure of what it is, you can access</p>
+<p>And enter your credentials!</p>
+<p>Now, we have to connect our hard drive/ssd/usbflashdrive/etc. to the Raspberry Pi, in our case, it was a 100GB hard drive which was connected to the Raspberry Pi with a SATA Adapter and 2 USB 3.0 cables.</p>
+<p>After that, we must check whether the Pi actually detected the Hard Drive or not. For this you must have privileged access to your Raspberry Pi;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l
+</code></pre></div><p>The result should be something like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Disk /dev/sda: 93.2 GiB, <span class="m">107374127424</span> bytes, <span class="m">123513245</span> sectors
+Disk model: HDD100G
+Units: sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
+Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
+I/O size <span class="o">(</span>minimum/optimal<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
+Disklabel type: dos
+Disk identifier: 0x29035alr
+
+Device    Boot Start           End    Sectors   Size  Id  Type
+/dev/sda1       <span class="m">2048</span>  <span class="m">107374127424</span>  <span class="m">123513245</span>  93.2G   <span class="m">9</span>  HPFS/NTFS/exFAT
+</code></pre></div><p>You would see many drives and each will have information in a format like this, the way you would identify your external hard drive would be by the size, so there would be many disks with different names like <code>/dev/sda</code> and <code>/dev/sbd</code> and things like that but next to the name, there is the size, <code>93.2 GiB</code> or something similar, your drive may be 100Gigabytes but the size shown in the terminal will be smaller like 93.2Gigabytes but it should be close enough for you to identify it.</p>
+<p>So suppose you had connected a 1TB Hard Drive, it may say the size is something like 932 Gigabytes so be on the lookout for that.</p>
+<p>Under the disk information, it would give <code>Device</code> information, each <code>Device</code> is a volume or partition on the drive, each partition is named with the name of the disk suffixed with the partition number if it is a logical primary partition.</p>
+<p>In the sample partition I gave was <code>/dev/sda1</code>, it is the only partition in the drive and as you can see, it&rsquo;s <code>End</code> byte is the last byte in the whole drive so it&rsquo;s size encompasses the entire drive.</p>
+<p>This is the volume that you will be mounting using as the &lsquo;drive&rsquo;.</p>
+<h3 id="incase-your-drive-is-un-initialised-doesnt-have-any-partitions--volumes-or-you-want-to-start-off-fresh">Incase Your Drive Is Un-Initialised (Doesn&rsquo;t Have Any Partitions / Volumes) OR You Want To Start Off Fresh</h3>
+<blockquote>
+<p>Run the partition editor for that drive;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l /dev/sda
+</code></pre></div><p>Then, press &rsquo;d' to delete every partition in the drive, just in case, <strong>YOU WILL LOSE YOUR DATA IF THERE WAS ANY PRESENT</strong>.</p>
+<p>Then, press &lsquo;n&rsquo; to create a new partition, you can just keep pressing enter to all the questions, that will make you enter the default configuration details for the partition.</p>
+<p>This will create a single partition that encompasses the entire drive.</p>
+<p>This partition will have the default linux ext4 filesystem, if you wish to use NTFS, you should know how to do that, don&rsquo;t worry though, ext4 is still readable to Windows!</p>
+<p>If you want to create more than one partition, you should know how to do that.</p>
+<p>Now check whether you&rsquo;ve actually gotten a new volume on the drive.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l
+</code></pre></div><p>And be on the lookout for a result similar to the one previously mentioned;</p>
+<pre tabindex="0"><code>Device    Boot Start           End    Sectors   Size  Id  Type
+/dev/sda1       2048  107374127424  123513245  93.2G   9  HPFS/NTFS/exFAT
+</code></pre></blockquote>
+<h2 id="mounting-the-volume">Mounting The Volume</h2>
+<p>Now that you know the name of the volume that you want to mount, in this case <code>/dev/sda1</code>, you&rsquo;re going to want to mount it!</p>
+<p>In Raspberry Pi OS, and most other distros I&rsquo;ve used, there is a directory in the root of the drive known as <code>/mnt</code>, this directory can be used as the parent directory under which external drives can be mounted.</p>
+<p>Before we mount our drive volume, we must create a folder for it to use as a mount point. To do this we must first change directories into the <code>/mnt</code> directory;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /mnt
+</code></pre></div><p>Then, we must create a new directory to use as a mount point, you can name it anything but in this case, it&rsquo;s HDD100G;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkdir HDD100G
+</code></pre></div><p>Now, we are ready to mount the volume onto our new mount point!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo mount /dev/sda1 /mnt/HDD100G
+</code></pre></div><p>It is a good idea to recheck the name of the volume before mounting it;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l
+</code></pre></div><p>Great! Now you&rsquo;ve mounted your drive!</p>
+<p>Incase you need to unmount the drive (if you&rsquo;re disconnecting the cable, PLEASE unmount before doing so.)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo umount /dev/sda1
+</code></pre></div><h2 id="setting-up-the-smbd-samba-share-server">Setting Up The SMBD (samba share) Server</h2>
+<p>An SMBD (samba share) server allows file sharing because it appears as a network drive which can be accessed by any device on the network that is permitted to access it.</p>
+<p>We first have to install the smbd server but before doing that, we must update our repositories;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt update
+</code></pre></div><p>You could also run;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt upgrade
+</code></pre></div><p>But running that might be quite timetaking and ideally you should&rsquo;ve done that when you were first setting up the Raspberry Pi</p>
+<p>Now that our repositories are up to date, we can install the samba program;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install samba samba-common
+</code></pre></div><p>If it prompts you for anything, just say &lsquo;Yes&rsquo;</p>
+<p>Now you should edit <code>smb.conf</code>, the file that contains the samaba server configuration;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo nano /etc/samba/smb.conf
+</code></pre></div><p>This will open up the nano text editor which will allow you to modify the <code>smb.conf</code> file. Now, you want to go to the end of the file you can do this either with <code>CTRL + END</code> or you can just keep spamming the down arrow key if that isn&rsquo;t possible.</p>
+<p>At the bottom of the <code>smb.conf</code> file, you should enter the details as such;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>HDD100G<span class="o">]</span>
+<span class="nv">path</span> <span class="o">=</span> /mnt/HDD100G
+<span class="nv">writeable</span> <span class="o">=</span> yes
+create <span class="nv">mask</span> <span class="o">=</span> <span class="m">0777</span>
+directory <span class="nv">mask</span> <span class="o">=</span> <span class="m">0777</span>
+<span class="nv">public</span> <span class="o">=</span> yes
+</code></pre></div><p>Remember to replace <code>HDD100G</code> with the names that you have used. The writeable toggle is pretty self-explanatory, the create and directory mask values are values that allow all smb users to read, modify and delete the files on that drive, if you wish to set a different set of values for the masks, a quick <a class="link" href="" >insert your preffered search engine</a> search should help you out, although you should know that these masks should work perfectly fine for you. The public toggle means that in your LAN, the network location will be visible under the Pi&rsquo;s hostname, in this case, raspberrypi.</p>
+<p>Now, we need to add a password for the current smb share user, in this case, pi. This username and password will allow you to access the smb share files. To add a password to the current user, pi do this;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo smbpasswd -a pi
+</code></pre></div><p>You can now enter the password you want to enter, this password doesn&rsquo;t have to be the same password as your user password for accessing the system.</p>
+<p>You can only add an smbpasswd for a user that is already existing in the system. If you want to add a new user in the system apart from pi, do this;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo adduser user
+</code></pre></div><p>Replace user with a username of your choice.</p>
+<p>Once you&rsquo;ve done <code>sudo adduser user</code>, you can also add that user to the smb server;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo smbpasswd -a user
+</code></pre></div><p>And repeat the same process that you did to add the pi user to the smb share server.</p>
+<p>Once you&rsquo;re finished with all your samba configuration, you need to restart the samba service;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo systemctl restart smbd
+</code></pre></div><p>Now your samba share server should be ready!</p>
+<p>To access the drive from a Windows system, you must go to the File Explorer and in the address bar, you can enter <code>\\\raspberrypi\HDD100G</code> replace <code>raspberrypi</code> with the hostname of your raspberry pi OR the IP address of the Raspberry Pi and <code>HDD100G</code> with the name entered as the header for your smb.conf entry.</p>
+<p>To access the drive from a Unix system (MacOS, Linux, BSD, etc.), in the file explorer, in the address bar, you can go to <code>smb://raspberrypi/HDD100G</code> replace <code>raspberrypi</code> with the hostname of your raspberry pi OR the IP address of the Raspberry Pi and <code>HDD100G</code> with the name entered as the header for your smb.conf entry.</p>
+<p>And that&rsquo;s it! That&rsquo;s how I configured my own Raspberry Pi samba share server.</p>
+<blockquote>
+<p>Thank you for reading!</p>
+</blockquote>
+<hr>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="https://arjdroid.github.io/tags/raspberrypi/">raspberrypi</a>
+        
+            <a href="https://arjdroid.github.io/tags/networking/">networking</a>
+        
+    </section>
+
+
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">&copy; 2021 The Droid Blog</section>
+    <section class="powerby">
+        Built with <b><a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a></b> with the <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener">Stack Theme by Jimmy Cai</a></b> and hosted with <b><a href="https://github.com" target="_blank" rel="noopener">Github Pages</a></b><br />
+        This Website is Open Source! Source Code <b><a href="https://github.com/Arjdroid/the_droid_blog-source_files">Here</a></b>
+    </section>
+</footer>
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" style="display:none">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+            </main>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
+    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<link rel="stylesheet" href="/css/highlight/light.min.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="/css/highlight/dark.min.css" media="(prefers-color-scheme: dark)">
+
+    </body>
+</html>
