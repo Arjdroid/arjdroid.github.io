@@ -6,7 +6,82 @@
         <description>Recent content on The Droid Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 23 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 12 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Customising a UNIX Terminal</title>
+        <link>https://arjdroid.github.io/p/customising-a-unix-terminal/</link>
+        <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://arjdroid.github.io/p/customising-a-unix-terminal/</guid>
+        <description>&lt;img src="https://arjdroid.github.io/p/customising-a-unix-terminal/myterminal.jpg" alt="Featured image of post Customising a UNIX Terminal" /&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;When you spend a lot of your time working on a command line interface, it&amp;rsquo;s pretty important (at least for me) to make sure that you like how your command line looks and that it is an efficient environment that can boost your productivity in your command line workflow.&lt;/p&gt;
+&lt;p&gt;A customised terminal is unique and brings the personality of the user into the console, highlighting what the user thinks is important, as well as bringing in a little style to stand out from the boring black and white terminals with a single dollar sign line indicator.&lt;/p&gt;
+&lt;p&gt;There are many ways to go about customising your terminal, from using automated shell scripts all the way to hand editing your &lt;code&gt;.bashrc&lt;/code&gt; or &lt;code&gt;.zshrc&lt;/code&gt; files, all depending upon on how much time you want to spend on such a task.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A UNIX-like terminal interface either on macOS or Linux (no Powershell but WSL does count as Linux)&lt;/li&gt;
+&lt;li&gt;Some knowledge on working with a terminal interface&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;terminal-emulator&#34;&gt;Terminal Emulator&lt;/h2&gt;
+&lt;p&gt;Your first choice is going to be on what terminal emulator you are going to use in order to experience the command line interface. There are many different options depending upon your operating system.&lt;/p&gt;
+&lt;h4 id=&#34;macos&#34;&gt;macOS&lt;/h4&gt;
+&lt;p&gt;On macOS I&amp;rsquo;ve found that the default &lt;a class=&#34;link&#34; href=&#34;https://support.apple.com/en-gb/guide/terminal/welcome/mac&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Terminal&lt;/a&gt; application included by Apple is quite the option. It has all the features that modern terminal emulators require, from tabs, to text search, scrolling, and everything in between. I have also found it to be satisfyingly customisable, not just with functionality in terms of changing key macros but also appearance, with it being able to change every coloured item.&lt;/p&gt;
+&lt;p&gt;I am very happy with the default terminal application, but there are other alternatives available as well.&lt;/p&gt;
+&lt;p&gt;Take &lt;a class=&#34;link&#34; href=&#34;https://iterm2.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;iTerm2&lt;/a&gt; for example, it is another macOS focused Terminal Emulator, that is also open source and has a boat load of features. It is very popular and is comparable in terms of customisability. I&amp;rsquo;d say it is just really dependent on personal preference whether you should go for the default macOS &amp;ldquo;Terminal&amp;rdquo; or iTerm2 as they are both really solid options.&lt;/p&gt;
+&lt;p&gt;One other macOS Terminal emulator that comes to mind is &lt;a class=&#34;link&#34; href=&#34;https://alacritty.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Alacritty&lt;/a&gt;. It is a very different choice from the others mentioned thus far. Firstly, it is quite a lot less feature packed as the alternatives, it doesn&amp;rsquo;t have many features that others may consider basic such as tabs. All configuration is done via editing of the &lt;code&gt;alacritty.yml&lt;/code&gt; YAML file rather than a Graphical User Interface. It isn&amp;rsquo;t as &amp;ldquo;User Friendly&amp;rdquo; but is extremely customisable and blazingly fast at executing commands due to its GPU accelerated nature providing a noticable improvement in speed on some machines. It is the least polished Terminal Emulator of the three as it is still consiered to be at a beta level of readiness and the developers aren&amp;rsquo;t very &amp;ldquo;friendly&amp;rdquo; to macOS as, though they provide a macOS .dmg installer you are required to jump through a few hoops in terms of allowing the software to bypass macOS&amp;rsquo; Gateway in order to run the software because it is not actually Apple notarized so it has not been certified as &amp;ldquo;Not Malware&amp;rdquo; in Apple&amp;rsquo;s eyes.&lt;/p&gt;
+&lt;p&gt;To install Alacritty you have to go about it via a slightly more &amp;ldquo;complicated&amp;rdquo; path of adding a few flags in the brew package manager command, and this is potentially less secure so take that as you will.&lt;/p&gt;
+&lt;p&gt;Installing alacritty using the &lt;a class=&#34;link&#34; href=&#34;https://brew.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;brew&lt;/a&gt; package manager, in my opinion one of the best package managers for macOS although that is a topic for another time.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;brew install --cask alacritty --no-quarantine
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There are probably a lot more macOS Terminal Emulators out there but these are the few that come off the top of my head and overall, macOS&amp;rsquo; very own &amp;ldquo;Terminal&amp;rdquo; is my preferred choice.
+You can easily find a lot of great colour schemes for the macOS Terminal over here, &lt;a href=&#34;https://github.com/lysyi3m/macos-terminal-themes&#34;&gt;https://github.com/lysyi3m/macos-terminal-themes&lt;/a&gt; it has a lot of my favourites.&lt;/p&gt;
+&lt;h4 id=&#34;linux&#34;&gt;Linux&lt;/h4&gt;
+&lt;p&gt;There is a great deal more choice in Terminal Emulators on the Linux platform, given that every Desktop Environment and or distribution has its own, I am just going to stick to the few that I know well.&lt;/p&gt;
+&lt;p&gt;Firstly, GNOME Terminal, included by default with GNOME based distros such as Ubuntu, Pop!_OS, and Fedora (and even on FreeBSD&amp;rsquo;s GNOME) is a great choice. It is quite a simplistic Terminal Emulator with all the basics that you&amp;rsquo;d expect such as Tabs, Search and keybind assingments as well as good choice in colour changing.
+I would recommend checking out this project; &lt;a href=&#34;https://gogh-co.github.io/Gogh/&#34;&gt;https://gogh-co.github.io/Gogh/&lt;/a&gt; which includes most of the same colour schemes as the other, macos-terminal-themes repository but also support a variety of Linux terminal emulators such as GNOME Terminal, Pantheon Terminal, Tilix or XFCE4 Terminal, and it also supports iTerm2 on macOS.&lt;/p&gt;
+&lt;p&gt;Alacritty is also available on Linux (and FreeBSD) with much of the same features. I have my own alacritty.yml file on my Github repository; &lt;a href=&#34;https://github.com/Arjdroid/Terminal-Custom-Configurator&#34;&gt;https://github.com/Arjdroid/Terminal-Custom-Configurator&lt;/a&gt; which has my preferred colour scheme and configurations although they probably may not be to your liking. I would suggest using the official &lt;a class=&#34;link&#34; href=&#34;https://github.com/alacritty/alacritty/blob/master/docs/features.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Alacritty documentation&lt;/a&gt; and also their sample &lt;a class=&#34;link&#34; href=&#34;https://github.com/alacritty/alacritty/blob/master/alacritty.yml&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;alacritty.yml&lt;/a&gt; file which has a guide on how to edit it to your preferences.&lt;/p&gt;
+&lt;p&gt;These are the only two Terminal Emulators I generally use on Linux as I don&amp;rsquo;t often use other Desktop Environments such as KDE Plasma or XFCE4 as daily drivers.&lt;/p&gt;
+&lt;h2 id=&#34;shell-program&#34;&gt;Shell Program&lt;/h2&gt;
+&lt;p&gt;The most common shell program found on Linux systems is GNU Bash as it is included by default in most Linux distros. It is quite customisable with tools like &lt;a class=&#34;link&#34; href=&#34;https://github.com/ohmybash/oh-my-bash&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;oh-my-bash&lt;/a&gt; as well as manually editing your &lt;code&gt;.bashrc&lt;/code&gt; file (usually located in ~/.bashrc) for which &lt;a class=&#34;link&#34; href=&#34;&#34; &gt;this&lt;/a&gt; may be a helpful guide &lt;a href=&#34;https://www.howtogeek.com/307701/how-to-customize-and-colorize-your-bash-prompt/&#34;&gt;https://www.howtogeek.com/307701/how-to-customize-and-colorize-your-bash-prompt/&lt;/a&gt; . It can go quite a long way but it just isn&amp;rsquo;t quite there for me in terms of plugin support.&lt;/p&gt;
+&lt;h3 id=&#34;zsh&#34;&gt;Zsh&lt;/h3&gt;
+&lt;p&gt;This is where Zsh comes in. Zsh is a newer, more modern shell program for UNIX-like systems and it is almost, if not fully compatible with bash commands. It is a drop-in replacement. It will be included in almost every Linux distro&amp;rsquo;s package repositories under the &lt;code&gt;zsh&lt;/code&gt; package name. Zsh is also included in macOS as the default shell program from macOS Catalina onwards so it is almost certain that your macOS computer already comes with Zsh.
+I personally prefer and use Zsh due to its customisability, with a lot of plugins and pre-built themes available for it. There are also many Zsh frameworks available to make tuning your Zsh setup more user friendly.&lt;/p&gt;
+&lt;h4 id=&#34;oh-my-zsh&#34;&gt;Oh My Zsh&lt;/h4&gt;
+&lt;p&gt;Currently I make use of &lt;a class=&#34;link&#34; href=&#34;https://ohmyz.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ohmyzsh&lt;/a&gt; as it is quite a popular open source Zsh framework and it is very convenient to use. It has an automated install script that helps you set it up. I added the ohmyzsh script to my own script, available in my aforementioned repository in order to quickly and semi-automatically deploy my preferred zsh-setup.&lt;/p&gt;
+&lt;p&gt;You can click the install button on the Zsh homepage to see the command needed to install it, either via &lt;code&gt;curl&lt;/code&gt; or &lt;code&gt;wget&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;curl:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sh -c &amp;quot;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;wget:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sh -c &amp;quot;$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once you install ohmyzsh, you do have to dig in a bit into your ohmyzsh revamped &lt;code&gt;.zshrc&lt;/code&gt; file. This will be located at the same ~/.zshrc location. The first thing I&amp;rsquo;d look at modifying is your theme, there are a lot of built-in themes to explore at &lt;a href=&#34;https://github.com/ohmyzsh/ohmyzsh/wiki/Themes&#34;&gt;https://github.com/ohmyzsh/ohmyzsh/wiki/Themes&lt;/a&gt; it can be hard to choose a favourite! You can easily switch themes by going into your &lt;code&gt;.zshrc&lt;/code&gt; and changing the &lt;code&gt;ZSH_THEME=&lt;/code&gt; variable so, by default it is &lt;code&gt;ZSH_THEME=robbyrussell&lt;/code&gt; but you could change it to something like &lt;code&gt;ZSH_THEME=dst&lt;/code&gt; or whatever you choose.&lt;/p&gt;
+&lt;h4 id=&#34;zsh-plugins&#34;&gt;Zsh Plugins&lt;/h4&gt;
+&lt;p&gt;Then there are Zsh plugins, this where a big difference is made in usage experience. There are a couple ways to add plugins, either by appending the plugin to your &lt;code&gt;.zshrc&lt;/code&gt; or to add them via ohmyzsh.&lt;/p&gt;
+&lt;p&gt;The github organisation &lt;a class=&#34;link&#34; href=&#34;https://github.com/zsh-users&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zsh-users&lt;/a&gt; has a lot of repositories containing Zsh plugins. For each plugin they have installation instructions (though they&amp;rsquo;re pretty much identical just replacing the name of the plugin).&lt;/p&gt;
+&lt;p&gt;For example, one of my favourite plugins is &lt;a class=&#34;link&#34; href=&#34;https://github.com/zsh-users/zsh-syntax-highlighting&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zsh-syntax-highlighting&lt;/a&gt;. The installation instructions are on that page which links to &lt;a href=&#34;https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md&#34;&gt;https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md&lt;/a&gt; where it gives you a plethora of different installation options. I would recommend going for the ohmyzsh method as it is distro-agnostic however, updates can be a bit of a pain in the butt. (maybe I should make an update script to go along with my installation script).&lt;/p&gt;
+&lt;p&gt;Basically, you clone the plugin&amp;rsquo;s repository into your ohmyzsh plugins directory:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then you must append the plugin name, in this case &lt;code&gt;zsh-syntax-highlighting&lt;/code&gt; to your plugins list in your ~/.zshrc file so it might be like&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;plugins=(git zsh-syntax-highlighting something-else)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Each plugin is separated by a space, no commas or apostrophes.&lt;/p&gt;
+&lt;p&gt;Another good plugin is &lt;a class=&#34;link&#34; href=&#34;https://github.com/zsh-users/zsh-autosuggestions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;zsh-autosuggestions&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And I think that, with this, you are now ready to venture into the crazy world of terminal customisation. And soon you may explore other Terminal Emulators like Konsole and other shell programs such as fish and ash and try to find what you personally enjoy to use.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Thank you for reading!&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
         <title>Setting up a NAS on my Raspberry Pi</title>
         <link>https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/</link>
         <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
@@ -34,7 +109,7 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;raspberry-pi-setup&#34;&gt;Raspberry Pi Setup&lt;/h2&gt;
 &lt;p&gt;So, the first thing we had to do was configure the Raspberry Pi4, it was pretty simple, we had a 16GB microSD card and we flashed Raspberry Pi OS onto it (that&amp;rsquo;s what they call Raspbian now) and we attached it to a TV with a keyboard and mouse as well as an Ethernet connection to our router and configured Raspberry Pi OS with all the usual stuff;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo raspi-config
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo raspi-config
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And viola! A pseudo command-line text-based G.U.I appears which allows you to configure most of the Raspberry Pi&amp;rsquo;s settings with arrow keys, a spacebar and an enter key. I&amp;rsquo;m skipping the configuration part;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h3 id=&#34;if-you-dont-know-how-to-configure-your-raspberry-pi&#34;&gt;If you don&amp;rsquo;t know how to configure your Raspberry Pi:&lt;/h3&gt;
@@ -44,14 +119,14 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 &lt;h2 id=&#34;hard-drive-configuration&#34;&gt;Hard Drive Configuration&lt;/h2&gt;
 &lt;p&gt;Now, all we have got to do is connect to it via SSH; (&lt;strong&gt;THIS IS ONLY IF YOU DO NOT HAVE A KEYBOARD AND MOUSE AND MONITOR CONNECTED TO THE PI, IF YOU DO HAVE THEM CONNECTED, SKIP THE SSH STEP, YOU CAN PERFORM ALL YOUR COMMANDS ON THE TERMINAL APP IN THE PI&lt;/strong&gt;)&lt;/p&gt;
 &lt;p&gt;On your own laptop/desktop terminal:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh username@ipa.ddr.ess.opi
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh username@ipa.ddr.ess.opi
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Remember to replace &lt;code&gt;username&lt;/code&gt; with your pi&amp;rsquo;s username, most of the time it&amp;rsquo;ll be &lt;code&gt;pi&lt;/code&gt; and replace &lt;code&gt;ipa.ddr.ess.opi&lt;/code&gt; with the ip address of your pi, it&amp;rsquo;ll look something like this, &lt;code&gt;192.168.1.180&lt;/code&gt;, to be sure of what it is, you can access&lt;/p&gt;
 &lt;p&gt;And enter your credentials!&lt;/p&gt;
 &lt;p&gt;Now, we have to connect our hard drive/ssd/usbflashdrive/etc. to the Raspberry Pi, in our case, it was a 100GB hard drive which was connected to the Raspberry Pi with a SATA Adapter and 2 USB 3.0 cables.&lt;/p&gt;
 &lt;p&gt;After that, we must check whether the Pi actually detected the Hard Drive or not. For this you must have privileged access to your Raspberry Pi;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo fdisk -l
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo fdisk -l
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The result should be something like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Disk /dev/sda: 93.2 GiB, &lt;span class=&#34;m&#34;&gt;107374127424&lt;/span&gt; bytes, &lt;span class=&#34;m&#34;&gt;123513245&lt;/span&gt; sectors
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Disk /dev/sda: 93.2 GiB, &lt;span class=&#34;m&#34;&gt;107374127424&lt;/span&gt; bytes, &lt;span class=&#34;m&#34;&gt;123513245&lt;/span&gt; sectors
 Disk model: HDD100G
 Units: sectors of &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; * &lt;span class=&#34;nv&#34;&gt;512&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; bytes
 Sector size &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;logical/physical&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: &lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; bytes / &lt;span class=&#34;m&#34;&gt;512&lt;/span&gt; bytes
@@ -69,64 +144,64 @@ Device    Boot Start           End    Sectors   Size  Id  Type
 &lt;h3 id=&#34;incase-your-drive-is-un-initialised-doesnt-have-any-partitions--volumes-or-you-want-to-start-off-fresh&#34;&gt;Incase Your Drive Is Un-Initialised (Doesn&amp;rsquo;t Have Any Partitions / Volumes) OR You Want To Start Off Fresh&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Run the partition editor for that drive;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo fdisk -l /dev/sda
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then, press &amp;rsquo;d&#39; to delete every partition in the drive, just in case, &lt;strong&gt;YOU WILL LOSE YOUR DATA IF THERE WAS ANY PRESENT&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo fdisk -l /dev/sda
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then, press &amp;lsquo;d&amp;rsquo; to delete every partition in the drive, just in case, &lt;strong&gt;YOU WILL LOSE YOUR DATA IF THERE WAS ANY PRESENT&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Then, press &amp;lsquo;n&amp;rsquo; to create a new partition, you can just keep pressing enter to all the questions, that will make you enter the default configuration details for the partition.&lt;/p&gt;
 &lt;p&gt;This will create a single partition that encompasses the entire drive.&lt;/p&gt;
 &lt;p&gt;This partition will have the default linux ext4 filesystem, if you wish to use NTFS, you should know how to do that, don&amp;rsquo;t worry though, ext4 is still readable to Windows!&lt;/p&gt;
 &lt;p&gt;If you want to create more than one partition, you should know how to do that.&lt;/p&gt;
 &lt;p&gt;Now check whether you&amp;rsquo;ve actually gotten a new volume on the drive.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo fdisk -l
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo fdisk -l
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And be on the lookout for a result similar to the one previously mentioned;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Device    Boot Start           End    Sectors   Size  Id  Type
+&lt;pre&gt;&lt;code&gt;Device    Boot Start           End    Sectors   Size  Id  Type
 /dev/sda1       2048  107374127424  123513245  93.2G   9  HPFS/NTFS/exFAT
 &lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;mounting-the-volume&#34;&gt;Mounting The Volume&lt;/h2&gt;
 &lt;p&gt;Now that you know the name of the volume that you want to mount, in this case &lt;code&gt;/dev/sda1&lt;/code&gt;, you&amp;rsquo;re going to want to mount it!&lt;/p&gt;
 &lt;p&gt;In Raspberry Pi OS, and most other distros I&amp;rsquo;ve used, there is a directory in the root of the drive known as &lt;code&gt;/mnt&lt;/code&gt;, this directory can be used as the parent directory under which external drives can be mounted.&lt;/p&gt;
 &lt;p&gt;Before we mount our drive volume, we must create a folder for it to use as a mount point. To do this we must first change directories into the &lt;code&gt;/mnt&lt;/code&gt; directory;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /mnt
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /mnt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then, we must create a new directory to use as a mount point, you can name it anything but in this case, it&amp;rsquo;s HDD100G;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mkdir HDD100G
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;mkdir HDD100G
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, we are ready to mount the volume onto our new mount point!&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo mount /dev/sda1 /mnt/HDD100G
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo mount /dev/sda1 /mnt/HDD100G
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It is a good idea to recheck the name of the volume before mounting it;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo fdisk -l
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo fdisk -l
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Great! Now you&amp;rsquo;ve mounted your drive!&lt;/p&gt;
 &lt;p&gt;Incase you need to unmount the drive (if you&amp;rsquo;re disconnecting the cable, PLEASE unmount before doing so.)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo umount /dev/sda1
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo umount /dev/sda1
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;setting-up-the-smbd-samba-share-server&#34;&gt;Setting Up The SMBD (samba share) Server&lt;/h2&gt;
 &lt;p&gt;An SMBD (samba share) server allows file sharing because it appears as a network drive which can be accessed by any device on the network that is permitted to access it.&lt;/p&gt;
 &lt;p&gt;We first have to install the smbd server but before doing that, we must update our repositories;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt update
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt update
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You could also run;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt upgrade
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt upgrade
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;But running that might be quite timetaking and ideally you should&amp;rsquo;ve done that when you were first setting up the Raspberry Pi&lt;/p&gt;
 &lt;p&gt;Now that our repositories are up to date, we can install the samba program;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt install samba samba-common
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt install samba samba-common
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If it prompts you for anything, just say &amp;lsquo;Yes&amp;rsquo;&lt;/p&gt;
 &lt;p&gt;Now you should edit &lt;code&gt;smb.conf&lt;/code&gt;, the file that contains the samaba server configuration;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo nano /etc/samba/smb.conf
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo nano /etc/samba/smb.conf
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will open up the nano text editor which will allow you to modify the &lt;code&gt;smb.conf&lt;/code&gt; file. Now, you want to go to the end of the file you can do this either with &lt;code&gt;CTRL + END&lt;/code&gt; or you can just keep spamming the down arrow key if that isn&amp;rsquo;t possible.&lt;/p&gt;
 &lt;p&gt;At the bottom of the &lt;code&gt;smb.conf&lt;/code&gt; file, you should enter the details as such;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;HDD100G&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;HDD100G&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
 &lt;span class=&#34;nv&#34;&gt;path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; /mnt/HDD100G
 &lt;span class=&#34;nv&#34;&gt;writeable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; yes
-create &lt;span class=&#34;nv&#34;&gt;mask&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0777&lt;/span&gt;
-directory &lt;span class=&#34;nv&#34;&gt;mask&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0777&lt;/span&gt;
+create &lt;span class=&#34;nv&#34;&gt;mask&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 0777
+directory &lt;span class=&#34;nv&#34;&gt;mask&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 0777
 &lt;span class=&#34;nv&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; yes
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Remember to replace &lt;code&gt;HDD100G&lt;/code&gt; with the names that you have used. The writeable toggle is pretty self-explanatory, the create and directory mask values are values that allow all smb users to read, modify and delete the files on that drive, if you wish to set a different set of values for the masks, a quick &lt;a class=&#34;link&#34; href=&#34;&#34; &gt;insert your preffered search engine&lt;/a&gt; search should help you out, although you should know that these masks should work perfectly fine for you. The public toggle means that in your LAN, the network location will be visible under the Pi&amp;rsquo;s hostname, in this case, raspberrypi.&lt;/p&gt;
 &lt;p&gt;Now, we need to add a password for the current smb share user, in this case, pi. This username and password will allow you to access the smb share files. To add a password to the current user, pi do this;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo smbpasswd -a pi
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo smbpasswd -a pi
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can now enter the password you want to enter, this password doesn&amp;rsquo;t have to be the same password as your user password for accessing the system.&lt;/p&gt;
 &lt;p&gt;You can only add an smbpasswd for a user that is already existing in the system. If you want to add a new user in the system apart from pi, do this;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo adduser user
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo adduser user
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Replace user with a username of your choice.&lt;/p&gt;
 &lt;p&gt;Once you&amp;rsquo;ve done &lt;code&gt;sudo adduser user&lt;/code&gt;, you can also add that user to the smb server;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo smbpasswd -a user
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo smbpasswd -a user
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And repeat the same process that you did to add the pi user to the smb share server.&lt;/p&gt;
 &lt;p&gt;Once you&amp;rsquo;re finished with all your samba configuration, you need to restart the samba service;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo systemctl restart smbd
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo systemctl restart smbd
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now your samba share server should be ready!&lt;/p&gt;
 &lt;p&gt;To access the drive from a Windows system, you must go to the File Explorer and in the address bar, you can enter &lt;code&gt;\\\raspberrypi\HDD100G&lt;/code&gt; replace &lt;code&gt;raspberrypi&lt;/code&gt; with the hostname of your raspberry pi OR the IP address of the Raspberry Pi and &lt;code&gt;HDD100G&lt;/code&gt; with the name entered as the header for your smb.conf entry.&lt;/p&gt;
 &lt;p&gt;To access the drive from a Unix system (MacOS, Linux, BSD, etc.), in the file explorer, in the address bar, you can go to &lt;code&gt;smb://raspberrypi/HDD100G&lt;/code&gt; replace &lt;code&gt;raspberrypi&lt;/code&gt; with the hostname of your raspberry pi OR the IP address of the Raspberry Pi and &lt;code&gt;HDD100G&lt;/code&gt; with the name entered as the header for your smb.conf entry.&lt;/p&gt;
@@ -259,7 +334,7 @@ directory &lt;span class=&#34;nv&#34;&gt;mask&lt;/span&gt; &lt;span class=&#34;o
 &lt;/table&gt;
 &lt;h2 id=&#34;code-blocks&#34;&gt;Code Blocks&lt;/h2&gt;
 &lt;h4 id=&#34;code-block-with-backticks&#34;&gt;Code block with backticks&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;charset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -282,7 +357,7 @@ directory &lt;span class=&#34;nv&#34;&gt;mask&lt;/span&gt; &lt;span class=&#34;o
 &amp;lt;/html&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;code-block-with-hugos-internal-highlight-shortcode&#34;&gt;Code block with Hugo&amp;rsquo;s internal highlight shortcode&lt;/h4&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;html&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
   &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;meta&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;charset&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;utf-8&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
@@ -332,7 +407,7 @@ directory &lt;span class=&#34;nv&#34;&gt;mask&lt;/span&gt; &lt;span class=&#34;o
 &lt;ol&gt;
 &lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
 &lt;p&gt;The above quote is excerpted from Rob Pike&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=PAAkCSZUG1c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;talk&lt;/a&gt; during Gopherfest, November 18, 2015.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+    &gt;talk&lt;/a&gt; during Gopherfest, November 18, 2015. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
@@ -346,7 +421,7 @@ directory &lt;span class=&#34;nv&#34;&gt;mask&lt;/span&gt; &lt;span class=&#34;o
         <guid>https://arjdroid.github.io/p/rss/</guid>
         <description>&lt;img src="https://arjdroid.github.io/p/rss/P1181064.JPG" alt="Featured image of post RSS" /&gt;&lt;blockquote&gt;
 &lt;p&gt;If you wish to subscribe to my RSS feed so that you may be alerted to new blog posts quickly, in your RSS feed reader of choice, you may enter this as the URL at the entry for the URL of the RSS feed;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;url = https://arjdroid.github.io/index.xml
+&lt;pre&gt;&lt;code&gt;url = https://arjdroid.github.io/index.xml
 &lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 &lt;p&gt;Once you enter this as the URL for the RSS feed reader, it will automatically fetch the RSS feed from this website.&lt;/p&gt;
 &lt;blockquote&gt;

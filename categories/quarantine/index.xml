@@ -6,7 +6,11 @@
     <description>Recent content in quarantine on The Droid Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.github.io/categories/quarantine/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Oct 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://arjdroid.github.io/categories/quarantine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Life in Quarantine</title>
       <link>https://arjdroid.github.io/p/life-in-quarantine/</link>

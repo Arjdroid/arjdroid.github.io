@@ -199,21 +199,21 @@
     
     <header class="article-category">
         
-            <a href="https://arjdroid.github.io/categories/raspberrypi/" 
-                    class="color-tag"
-                    data-image="/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas_hu227b61606f8d971d1f6c07b446f98099_3382114_20x20_fill_q75_box_smart1.jpg" 
-                    data-key="" 
-                    data-hash="md5-TntvWSGMtRFzq9EI78Iqbg==">
-                    raspberrypi
-                </a>
-            
-        
             <a href="https://arjdroid.github.io/categories/networking/" 
                     class="color-tag"
                     data-image="/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas_hu227b61606f8d971d1f6c07b446f98099_3382114_20x20_fill_q75_box_smart1.jpg" 
                     data-key="" 
                     data-hash="md5-TntvWSGMtRFzq9EI78Iqbg==">
                     networking
+                </a>
+            
+        
+            <a href="https://arjdroid.github.io/categories/raspberrypi/" 
+                    class="color-tag"
+                    data-image="/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas_hu227b61606f8d971d1f6c07b446f98099_3382114_20x20_fill_q75_box_smart1.jpg" 
+                    data-key="" 
+                    data-hash="md5-TntvWSGMtRFzq9EI78Iqbg==">
+                    raspberrypi
                 </a>
             
         
@@ -264,7 +264,7 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 </blockquote>
 <h2 id="raspberry-pi-setup">Raspberry Pi Setup</h2>
 <p>So, the first thing we had to do was configure the Raspberry Pi4, it was pretty simple, we had a 16GB microSD card and we flashed Raspberry Pi OS onto it (that&rsquo;s what they call Raspbian now) and we attached it to a TV with a keyboard and mouse as well as an Ethernet connection to our router and configured Raspberry Pi OS with all the usual stuff;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo raspi-config
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo raspi-config
 </code></pre></div><p>And viola! A pseudo command-line text-based G.U.I appears which allows you to configure most of the Raspberry Pi&rsquo;s settings with arrow keys, a spacebar and an enter key. I&rsquo;m skipping the configuration part;</p>
 <blockquote>
 <h3 id="if-you-dont-know-how-to-configure-your-raspberry-pi">If you don&rsquo;t know how to configure your Raspberry Pi:</h3>
@@ -274,14 +274,14 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 <h2 id="hard-drive-configuration">Hard Drive Configuration</h2>
 <p>Now, all we have got to do is connect to it via SSH; (<strong>THIS IS ONLY IF YOU DO NOT HAVE A KEYBOARD AND MOUSE AND MONITOR CONNECTED TO THE PI, IF YOU DO HAVE THEM CONNECTED, SKIP THE SSH STEP, YOU CAN PERFORM ALL YOUR COMMANDS ON THE TERMINAL APP IN THE PI</strong>)</p>
 <p>On your own laptop/desktop terminal:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ssh username@ipa.ddr.ess.opi
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ssh username@ipa.ddr.ess.opi
 </code></pre></div><p>Remember to replace <code>username</code> with your pi&rsquo;s username, most of the time it&rsquo;ll be <code>pi</code> and replace <code>ipa.ddr.ess.opi</code> with the ip address of your pi, it&rsquo;ll look something like this, <code>192.168.1.180</code>, to be sure of what it is, you can access</p>
 <p>And enter your credentials!</p>
 <p>Now, we have to connect our hard drive/ssd/usbflashdrive/etc. to the Raspberry Pi, in our case, it was a 100GB hard drive which was connected to the Raspberry Pi with a SATA Adapter and 2 USB 3.0 cables.</p>
 <p>After that, we must check whether the Pi actually detected the Hard Drive or not. For this you must have privileged access to your Raspberry Pi;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l
 </code></pre></div><p>The result should be something like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Disk /dev/sda: 93.2 GiB, <span class="m">107374127424</span> bytes, <span class="m">123513245</span> sectors
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">Disk /dev/sda: 93.2 GiB, <span class="m">107374127424</span> bytes, <span class="m">123513245</span> sectors
 Disk model: HDD100G
 Units: sectors of <span class="m">1</span> * <span class="nv">512</span> <span class="o">=</span> <span class="m">512</span> bytes
 Sector size <span class="o">(</span>logical/physical<span class="o">)</span>: <span class="m">512</span> bytes / <span class="m">512</span> bytes
@@ -299,64 +299,64 @@ Device    Boot Start           End    Sectors   Size  Id  Type
 <h3 id="incase-your-drive-is-un-initialised-doesnt-have-any-partitions--volumes-or-you-want-to-start-off-fresh">Incase Your Drive Is Un-Initialised (Doesn&rsquo;t Have Any Partitions / Volumes) OR You Want To Start Off Fresh</h3>
 <blockquote>
 <p>Run the partition editor for that drive;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l /dev/sda
-</code></pre></div><p>Then, press &rsquo;d' to delete every partition in the drive, just in case, <strong>YOU WILL LOSE YOUR DATA IF THERE WAS ANY PRESENT</strong>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l /dev/sda
+</code></pre></div><p>Then, press &lsquo;d&rsquo; to delete every partition in the drive, just in case, <strong>YOU WILL LOSE YOUR DATA IF THERE WAS ANY PRESENT</strong>.</p>
 <p>Then, press &lsquo;n&rsquo; to create a new partition, you can just keep pressing enter to all the questions, that will make you enter the default configuration details for the partition.</p>
 <p>This will create a single partition that encompasses the entire drive.</p>
 <p>This partition will have the default linux ext4 filesystem, if you wish to use NTFS, you should know how to do that, don&rsquo;t worry though, ext4 is still readable to Windows!</p>
 <p>If you want to create more than one partition, you should know how to do that.</p>
 <p>Now check whether you&rsquo;ve actually gotten a new volume on the drive.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l
 </code></pre></div><p>And be on the lookout for a result similar to the one previously mentioned;</p>
-<pre tabindex="0"><code>Device    Boot Start           End    Sectors   Size  Id  Type
+<pre><code>Device    Boot Start           End    Sectors   Size  Id  Type
 /dev/sda1       2048  107374127424  123513245  93.2G   9  HPFS/NTFS/exFAT
 </code></pre></blockquote>
 <h2 id="mounting-the-volume">Mounting The Volume</h2>
 <p>Now that you know the name of the volume that you want to mount, in this case <code>/dev/sda1</code>, you&rsquo;re going to want to mount it!</p>
 <p>In Raspberry Pi OS, and most other distros I&rsquo;ve used, there is a directory in the root of the drive known as <code>/mnt</code>, this directory can be used as the parent directory under which external drives can be mounted.</p>
 <p>Before we mount our drive volume, we must create a folder for it to use as a mount point. To do this we must first change directories into the <code>/mnt</code> directory;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /mnt
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /mnt
 </code></pre></div><p>Then, we must create a new directory to use as a mount point, you can name it anything but in this case, it&rsquo;s HDD100G;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">mkdir HDD100G
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">mkdir HDD100G
 </code></pre></div><p>Now, we are ready to mount the volume onto our new mount point!</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo mount /dev/sda1 /mnt/HDD100G
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo mount /dev/sda1 /mnt/HDD100G
 </code></pre></div><p>It is a good idea to recheck the name of the volume before mounting it;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo fdisk -l
 </code></pre></div><p>Great! Now you&rsquo;ve mounted your drive!</p>
 <p>Incase you need to unmount the drive (if you&rsquo;re disconnecting the cable, PLEASE unmount before doing so.)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo umount /dev/sda1
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo umount /dev/sda1
 </code></pre></div><h2 id="setting-up-the-smbd-samba-share-server">Setting Up The SMBD (samba share) Server</h2>
 <p>An SMBD (samba share) server allows file sharing because it appears as a network drive which can be accessed by any device on the network that is permitted to access it.</p>
 <p>We first have to install the smbd server but before doing that, we must update our repositories;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt update
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt update
 </code></pre></div><p>You could also run;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt upgrade
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt upgrade
 </code></pre></div><p>But running that might be quite timetaking and ideally you should&rsquo;ve done that when you were first setting up the Raspberry Pi</p>
 <p>Now that our repositories are up to date, we can install the samba program;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt install samba samba-common
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt install samba samba-common
 </code></pre></div><p>If it prompts you for anything, just say &lsquo;Yes&rsquo;</p>
 <p>Now you should edit <code>smb.conf</code>, the file that contains the samaba server configuration;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo nano /etc/samba/smb.conf
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo nano /etc/samba/smb.conf
 </code></pre></div><p>This will open up the nano text editor which will allow you to modify the <code>smb.conf</code> file. Now, you want to go to the end of the file you can do this either with <code>CTRL + END</code> or you can just keep spamming the down arrow key if that isn&rsquo;t possible.</p>
 <p>At the bottom of the <code>smb.conf</code> file, you should enter the details as such;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>HDD100G<span class="o">]</span>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="o">[</span>HDD100G<span class="o">]</span>
 <span class="nv">path</span> <span class="o">=</span> /mnt/HDD100G
 <span class="nv">writeable</span> <span class="o">=</span> yes
-create <span class="nv">mask</span> <span class="o">=</span> <span class="m">0777</span>
-directory <span class="nv">mask</span> <span class="o">=</span> <span class="m">0777</span>
+create <span class="nv">mask</span> <span class="o">=</span> 0777
+directory <span class="nv">mask</span> <span class="o">=</span> 0777
 <span class="nv">public</span> <span class="o">=</span> yes
 </code></pre></div><p>Remember to replace <code>HDD100G</code> with the names that you have used. The writeable toggle is pretty self-explanatory, the create and directory mask values are values that allow all smb users to read, modify and delete the files on that drive, if you wish to set a different set of values for the masks, a quick <a class="link" href="" >insert your preffered search engine</a> search should help you out, although you should know that these masks should work perfectly fine for you. The public toggle means that in your LAN, the network location will be visible under the Pi&rsquo;s hostname, in this case, raspberrypi.</p>
 <p>Now, we need to add a password for the current smb share user, in this case, pi. This username and password will allow you to access the smb share files. To add a password to the current user, pi do this;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo smbpasswd -a pi
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo smbpasswd -a pi
 </code></pre></div><p>You can now enter the password you want to enter, this password doesn&rsquo;t have to be the same password as your user password for accessing the system.</p>
 <p>You can only add an smbpasswd for a user that is already existing in the system. If you want to add a new user in the system apart from pi, do this;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo adduser user
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo adduser user
 </code></pre></div><p>Replace user with a username of your choice.</p>
 <p>Once you&rsquo;ve done <code>sudo adduser user</code>, you can also add that user to the smb server;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo smbpasswd -a user
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo smbpasswd -a user
 </code></pre></div><p>And repeat the same process that you did to add the pi user to the smb share server.</p>
 <p>Once you&rsquo;re finished with all your samba configuration, you need to restart the samba service;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo systemctl restart smbd
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">sudo systemctl restart smbd
 </code></pre></div><p>Now your samba share server should be ready!</p>
 <p>To access the drive from a Windows system, you must go to the File Explorer and in the address bar, you can enter <code>\\\raspberrypi\HDD100G</code> replace <code>raspberrypi</code> with the hostname of your raspberry pi OR the IP address of the Raspberry Pi and <code>HDD100G</code> with the name entered as the header for your smb.conf entry.</p>
 <p>To access the drive from a Unix system (MacOS, Linux, BSD, etc.), in the file explorer, in the address bar, you can go to <code>smb://raspberrypi/HDD100G</code> replace <code>raspberrypi</code> with the hostname of your raspberry pi OR the IP address of the Raspberry Pi and <code>HDD100G</code> with the name entered as the header for your smb.conf entry.</p>
@@ -373,9 +373,9 @@ directory <span class="nv">mask</span> <span class="o">=</span> <span class="m">
     
     <section class="article-tags">
         
-            <a href="https://arjdroid.github.io/tags/raspberrypi/">raspberrypi</a>
-        
             <a href="https://arjdroid.github.io/tags/networking/">networking</a>
+        
+            <a href="https://arjdroid.github.io/tags/raspberrypi/">raspberrypi</a>
         
     </section>
 
@@ -395,7 +395,7 @@ directory <span class="nv">mask</span> <span class="o">=</span> <span class="m">
     
 
     <footer class="site-footer">
-    <section class="copyright">&copy; 2021 The Droid Blog</section>
+    <section class="copyright">&copy; 2022 The Droid Blog</section>
     <section class="powerby">
         Built with <b><a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a></b> with the <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener">Stack Theme by Jimmy Cai</a></b> and hosted with <b><a href="https://github.com" target="_blank" rel="noopener">Github Pages</a></b><br />
         This Website is Open Source! Source Code <b><a href="https://github.com/Arjdroid/the_droid_blog-source_files">Here</a></b>
@@ -466,8 +466,7 @@ directory <span class="nv">mask</span> <span class="o">=</span> <span class="m">
 </div>
             </main>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"
-    integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin="anonymous"></script><script type="text/javascript" src="/ts/main.js" defer></script>
+        
 <script>
     (function () {
         const customFont = document.createElement('link');
@@ -481,6 +480,7 @@ directory <span class="nv">mask</span> <span class="o">=</span> <span class="m">
 </script>
 <link rel="stylesheet" href="/css/highlight/light.min.css" media="(prefers-color-scheme: light)">
 <link rel="stylesheet" href="/css/highlight/dark.min.css" media="(prefers-color-scheme: dark)">
+
 
     </body>
 </html>
