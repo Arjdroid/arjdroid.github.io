@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+    <link rel="icon" type="image/png" href="/favicon/favicon.png">
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='An article that details how I hosted my own Minecraft Server using the Docker Engine.'><title>Hosting my own Minecraft Server with Docker on Linux</title>
+
+    <link rel='canonical' href='https://arjdroid.github.io/p/hosting-my-own-minecraft-server-with-docker-on-linux/'>
+
+<link rel="stylesheet" href="/scss/style.min.css">
+<meta property='og:title' content='Hosting my own Minecraft Server with Docker on Linux'>
+<meta property='og:description' content='An article that details how I hosted my own Minecraft Server using the Docker Engine.'>
+<meta property='og:url' content='https://arjdroid.github.io/p/hosting-my-own-minecraft-server-with-docker-on-linux/'>
+<meta property='og:site_name' content='The Droid Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='minecraft' /><meta property='article:tag' content='gaming' /><meta property='article:tag' content='networking' /><meta property='article:tag' content='homelab' /><meta property='article:published_time' content='2022-06-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-06-09T00:00:00&#43;00:00'/><meta property='og:image' content='https://arjdroid.github.io/p/hosting-my-own-minecraft-server-with-docker-on-linux/minecraft-server.png' />
+<meta name="twitter:title" content="Hosting my own Minecraft Server with Docker on Linux">
+<meta name="twitter:description" content="An article that details how I hosted my own Minecraft Server using the Docker Engine."><meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content='https://arjdroid.github.io/p/hosting-my-own-minecraft-server-with-docker-on-linux/minecraft-server.png' /></head>
+<body class="">
+        <div class="container flex on-phone--column align-items--flex-start extended article-page with-toolbar">
+            <aside class="sidebar left-sidebar sticky">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header class="site-info">
+        
+            <figure class="site-avatar">
+                
+
+                
+                    
+                    <img src="/img/avatar_hu99862c33b9e1069572ca594846bf10a3_832614_300x300_resize_q75_box.jpg" width="300"
+                        height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+
+                <span class="emoji">🖥️</span>
+            </figure>
+        
+        <h1 class="site-name"><a href="https://arjdroid.github.io">The Droid Blog</a></h1>
+        <h2 class="site-description">Computer Wizard In Training</h2>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+
+        <li >
+            <a href='https://arjdroid.github.io/'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://arjdroid.github.io/about'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://arjdroid.github.io/archives'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+
+        <li >
+            <a href='https://arjdroid.github.io/p/rss'>
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="5" cy="19" r="1" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <path d="M4 11a9 9 0 0 1 9 9" />
+</svg>
+
+
+
+                
+                <span>RSS</span>
+            </a>
+        </li>
+        
+    </ol>
+</aside>
+            <main class="main full-width">
+    <div id="article-toolbar">
+        <a href="https://arjdroid.github.io" class="back-home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+            <span>Back</span>
+        </a>
+    </div>
+
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <img srcset="/p/hosting-my-own-minecraft-server-with-docker-on-linux/minecraft-server_hubae9198a1cf4a122ab3bf181a4681f65_1192377_1024x0_resize_box_3.png 1024w, /p/hosting-my-own-minecraft-server-with-docker-on-linux/minecraft-server_hubae9198a1cf4a122ab3bf181a4681f65_1192377_2000x0_resize_box_3.png 2000w"
+                    src="/p/hosting-my-own-minecraft-server-with-docker-on-linux/minecraft-server_hubae9198a1cf4a122ab3bf181a4681f65_1192377_2000x0_resize_box_3.png" width="2428" height="1367" loading="lazy"
+                    alt="Featured image of post Hosting my own Minecraft Server with Docker on Linux" />
+            
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="https://arjdroid.github.io/categories/gaming/" 
+                    class="color-tag"
+                    data-image="/p/hosting-my-own-minecraft-server-with-docker-on-linux/minecraft-server_hubae9198a1cf4a122ab3bf181a4681f65_1192377_20x20_fill_box_smart1_3.png" 
+                    data-key="" 
+                    data-hash="md5-OhQmy7gIlUuC8dg/A15cxA==">
+                    gaming
+                </a>
+            
+        
+            <a href="https://arjdroid.github.io/categories/homelab/" 
+                    class="color-tag"
+                    data-image="/p/hosting-my-own-minecraft-server-with-docker-on-linux/minecraft-server_hubae9198a1cf4a122ab3bf181a4681f65_1192377_20x20_fill_box_smart1_3.png" 
+                    data-key="" 
+                    data-hash="md5-OhQmy7gIlUuC8dg/A15cxA==">
+                    homelab
+                </a>
+            
+        
+            <a href="https://arjdroid.github.io/categories/networking/" 
+                    class="color-tag"
+                    data-image="/p/hosting-my-own-minecraft-server-with-docker-on-linux/minecraft-server_hubae9198a1cf4a122ab3bf181a4681f65_1192377_20x20_fill_box_smart1_3.png" 
+                    data-key="" 
+                    data-hash="md5-OhQmy7gIlUuC8dg/A15cxA==">
+                    networking
+                </a>
+            
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="https://arjdroid.github.io/p/hosting-my-own-minecraft-server-with-docker-on-linux/">Hosting my own Minecraft Server with Docker on Linux</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        An article that details how I hosted my own Minecraft Server using the Docker Engine.
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Jun 09, 2022</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <blockquote>
+<p><strong>Disclaimer</strong>: This guide is a general overview, please also do additional research before following. If you plan on using this article as a guide for setting up your OWN Minecraft (Java Edition) server, <strong>PLEASE</strong> read the entire article before going through with this process (It may help clear any doubts you have as well as ensure that you can go through with this process). Also, do remember that <strong>I AM NOT RESPONSIBLE</strong> for any damage that YOU may cause to yourself or your own hardware including, but not limited to: bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed. YOU are choosing to make these modifications, and I provide no guarantees of any sort.</p>
+<p>Also, you might want to zoom in / out to adjust the webpage to your liking.</p>
+<h3 id="_this-guide-is-slightly-advanced-and-not-recommended-to-blindly-follow-especially-for-those-unfamiliar-with-using-linux-but-please-feel-free-to-go-over-it_"><em><strong>This guide is slightly advanced and not recommended to blindly follow especially for those unfamiliar with using Linux but please feel free to go over it</strong></em></h3>
+</blockquote>
+<h2 id="introduction">Introduction</h2>
+<p>The idea of running my own Minecraft server for me and my friends first came to me after watching countless online videos of people playing on Minecraft SMP&rsquo;s (Survival-Multiplayer), I wanted to be able to collaborate with my friends on glorious builds and finding boatloads of diamonds (to turn into netherite of course).</p>
+<p>There are a lot of different Minecraft server hosting options, some even being free of cost, but the free ones did not provide the best experience, though one can&rsquo;t really complain when it&rsquo;s free…</p>
+<p>I wanted a better experience, with more fine-tuned control over the settings and better server performance. Although, this is much more advanced than using a paid, dedicated Minecraft hosting service.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>A usable server (basically any computer, from a desktop to a laptop to a Raspberry Pi, a <a class="link" href="https://en.wikipedia.org/wiki/Virtual_machine"  target="_blank" rel="noopener"
+    >Virtual Machine</a>, or a cloud server on something like <em>Google Cloud Platform</em>)</li>
+<li>Decent Specifications (to handle around 5 simultaneous players):
+<ul>
+<li>At least a dual core 64bit processor (any modern Intel Core CPU or AMD Ryzen CPU), or a Raspberry 4 (I&rsquo;m not sure how well a 3 would hold up)</li>
+<li>As much RAM as possible, at least 4GB, more is preferred</li>
+<li>At LEAST 8GB of <em>free storage</em></li>
+</ul>
+</li>
+<li>Any Linux distro (Ubuntu Server is very usable or Raspberry Pi OS Lite if you&rsquo;re on a Pi)</li>
+<li>A valid Minecraft Java Edition Licence (to be able to play on your server!)</li>
+<li>Being comfortable with a Linux environment and having basic troubleshooting capability and computer knowledge</li>
+</ul>
+<p>I myself will be using a dual core (multi-threaded) amd64 virtual machine with 8GB of RAM assigned to it, running the server Linux distro Ubuntu. (If you use a distribution such as Arch Linux or Fedora or CentOS or OpenSUSE, the package commands / availability will be quite different for you although you already know that)</p>
+<h3 id="this-guide-assumes-a-few-more-things">This guide assumes a few more things</h3>
+<ul>
+<li>That you have already installed and setup your Linux distribution upon your server, whatever it may be</li>
+<li>That your server is connected to the internet and up-to-date</li>
+<li>That you have access to its command line (either via SSH or via a keyboard + monitor)</li>
+</ul>
+<blockquote>
+<p><strong>If you have not set up a Linux distribution on your server yet, you will need to do so</strong></p>
+<p>Usually it is a very straightforward installation process. I would recommend using the linux distribution Ubuntu Server as it is quite popular and has good support from forums to help with issues.</p>
+<p>You can follow Ubuntu&rsquo;s official installation documentation at <a class="link" href="https://ubuntu.com/tutorials/install-ubuntu-server"  target="_blank" rel="noopener"
+    >https://ubuntu.com/tutorials/install-ubuntu-server</a></p>
+<p>I am using <strong>Ubuntu 20.04 LTS</strong>. You may choose to use Ubuntu 22.04 LTS which is newer although, at the time of writing I have found there may be some software that is not yet updated to be fully compatible with it but it is 75% likely to have been resolved by now.</p>
+</blockquote>
+<h2 id="docker-engine-setup">Docker Engine Setup</h2>
+<p>If you already have Docker installed on your system, please skip ahead to the next section, &ldquo;Minecraft Server Docker Container Setup&rdquo;</p>
+<h3 id="intro-to-docker">Intro To Docker</h3>
+<p>We will be using the <a class="link" href="https://www.ibm.com/cloud/learn/containerization"  target="_blank" rel="noopener"
+    >containerization</a> engine known as Docker, this allows us to separate the application (Minecraft Server) from the rest of your host operating system, making the application more portable (the environment is identical in each and every docker copy of a container) and possibly more secure by isolating the application from the rest of the system as well as greatly easing the installation process.</p>
+<p>I prefer using Docker Containers over using native applications in server environments because it is generally more easy to maintain a Docker container as everything is neatly kept inside its little software box. It reduces the messiness of my server as I don&rsquo;t have to worry about random dotfiles in my home and config directories. It also makes the uninstallation process more painless as there will be less files to account for that might go missing.</p>
+<p>Docker Containers also reduce attack surface area, meaning that they generally improve the security of your server. This is because Docker Containers by their nature isolate the application you are running so it reduces the chance of a vulnerability within the application in your Docker Container affecting data in the host server and vice versa.</p>
+<p>Most serious and worthwhile server applications these days are available by their developers as a Docker Container. It is an industry standard especially in enterprise applications.</p>
+<h3 id="docker-install-instructions">Docker Install Instructions</h3>
+<p>Installing Docker is very simple, simply follow the instructions laid out at <a class="link" href="https://docs.docker.com/engine/install/"  target="_blank" rel="noopener"
+    >https://docs.docker.com/engine/install/</a>. It has instructions for all certified compatible systems. Just look at the table they give, and click on the tick-mark ✔️ which corresponds to your system. For my example, I&rsquo;d click on the tick for &ldquo;Ubuntu x86_64/amd64&rdquo;.</p>
+<blockquote>
+<p>I am including the instructions for my specific configuration (Ubuntu 20.04 LTS on amd64) . It may differ from the instructions you require, so please check the <a class="link" href="https://docs.docker.com/engine/install/"  target="_blank" rel="noopener"
+    >official documentation</a> to be sure. As always, read instructions CAREFULLY before following!</p>
+<h4 id="sidenote-docker-officially-support-use-on-the-following-linux-distributions">Sidenote: Docker officially support use on the following Linux Distributions</h4>
+<ul>
+<li>Ubuntu / Debian (x86_64, arm64)</li>
+<li>Fedora / RHEL (x86_64, arm64)</li>
+<li>Raspbian (arm32-bit, and the new arm64 OS as well)</li>
+<li>CentOS (x86_64, arm64)</li>
+<li>If you are using Arch Linux, you should follow the <a class="link" href="https://wiki.archlinux.org/title/Docker"  target="_blank" rel="noopener"
+    >Arch Wiki guide to using Docker</a> as it is not officially supported by Docker, but community maintained.</li>
+</ul>
+</blockquote>
+<p>The button leads to a webpage containing all necessary instructions such as uninstalling any old versions present:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo a remove docker docker-engine docker.io containerd runc
+</span></span></code></pre></div><p>It is most likely that, as you are on a fresh install, apt-get will report that none of these packages are installed or even been heard of (in its default repositories).</p>
+<p>I will be following Docker&rsquo;s recommended method of installation, which is to configure apt (Ubuntu&rsquo;s package manager) to use Docker&rsquo;s private repositories for easily manageable installs, there are other, more advanced methods which may suit specific needs, but for our purposes, this method is the simplest.</p>
+<p>To copy commands quickly you can double click the command to select the full line before pressing CTRL + C (or Command + C) to copy the line.</p>
+<p>First we must update our package repositories:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt update
+</span></span></code></pre></div><p>Then install some dependencies required for adding Docker&rsquo;s repositories.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt install ca-certificates curl gnupg lsb-release
+</span></span></code></pre></div><p>After that you have to actually add Docker&rsquo;s official GPG key (used to verify Docker&rsquo;s repository) to Ubuntu Server&rsquo;s keyring:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">curl -fsSL https://download.docker.com/linux/ubuntu/gpg <span class="p">|</span> sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+</span></span></code></pre></div><p>Then you need to choose which Docker repository you are going to add, in this case I&rsquo;m choosing <strong>stable</strong> which is almost always the desired option.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;deb [arch=</span><span class="k">$(</span>dpkg --print-architecture<span class="k">)</span><span class="s2"> signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu </span><span class="k">$(</span>lsb_release -cs<span class="k">)</span><span class="s2"> stable&#34;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</span></span></code></pre></div><p>Then, to actually install the latest version of Docker Engine, you need to update your repositories:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt update
+</span></span></code></pre></div><p>Then install the following packages:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt install docker-ce docker-ce-cli containerd.io
+</span></span></code></pre></div><p>To verify that Docker Engine is installed correctly, run the <strong>hello-world</strong> image:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo docker run hello-world
+</span></span></code></pre></div><p>It should give an output similar to this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">Hello from Docker!
+</span></span><span class="line"><span class="cl">This message shows that your installation appears to be working correctly.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">To generate this message, Docker took the following steps:
+</span></span><span class="line"><span class="cl"> 1. The Docker client contacted the Docker daemon.
+</span></span><span class="line"><span class="cl"> 2. The Docker daemon pulled the <span class="s2">&#34;hello-world&#34;</span> image from the Docker Hub.
+</span></span><span class="line"><span class="cl">    <span class="o">(</span>amd64<span class="o">)</span>
+</span></span><span class="line"><span class="cl"> 3. The Docker daemon created a new container from that image which runs the
+</span></span><span class="line"><span class="cl">    executable that produces the output you are currently reading.
+</span></span><span class="line"><span class="cl"> 4. The Docker daemon streamed that output to the Docker client, which sent it
+</span></span><span class="line"><span class="cl">    to your terminal.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">To try something more ambitious, you can run an Ubuntu container with:
+</span></span><span class="line"><span class="cl"> $ docker run -it ubuntu bash
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Share images, automate workflows, and more with a free Docker ID:
+</span></span><span class="line"><span class="cl"> https://hub.docker.com/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">For more examples and ideas, visit:
+</span></span><span class="line"><span class="cl"> https://docs.docker.com/get-started/
+</span></span></code></pre></div><p>You can try out its advise to run a proper Ubuntu container as well with the command <code>sudo docker run -it ubuntu bash</code> though keep in mind that this will eat up a couple of gigabytes of valuable storage because it creates a new docker container and it downloads the ubuntu image from docker&rsquo;s hub.</p>
+<blockquote>
+<h3 id="tip">Tip:</h3>
+<p>You can delete old containers and images that you are no longer using via the following commands:
+To delete an old container you must first know the name or the id of the container</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">$ sudo docker container ls -a
+</span></span><span class="line"><span class="cl">CONTAINER ID   IMAGE         COMMAND    CREATED         STATUS                     PORTS   NAMES
+</span></span><span class="line"><span class="cl">aaa7aab55ac1   hello-world   <span class="s2">&#34;/hello&#34;</span>   <span class="m">5</span> minutes ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">5</span> minutes ago           eager_haibt
+</span></span><span class="line"><span class="cl">5f4294d34628   ubuntu        <span class="s2">&#34;bash&#34;</span>     <span class="m">4</span> minutes ago   Exited <span class="o">(</span>0<span class="o">)</span> <span class="m">4</span> minutes ago           modest_banzai
+</span></span></code></pre></div><p>Suppose I want to delete the ubuntu container for whatever reason,I simply have to execute the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo docker rmi aaa7aab55ac1
+</span></span></code></pre></div><p>You can replace the container ID with that of whichever container you want to delete
+For more information you should check out the Docker documentation at <a class="link" href="https://docs.docker.com/"  target="_blank" rel="noopener"
+    >https://docs.docker.com/</a></p>
+</blockquote>
+<p>You should also install the <code>docker-compose-plugin</code> in case it was not already installed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt install docker-compose-plugin
+</span></span></code></pre></div><p>This is an optional add-on for Docker which can again improve how well your containers are organised and I am covering it in the next section.</p>
+<h2 id="minecraft-server-docker-container-setup">Minecraft Server Docker Container Setup</h2>
+<p>Now that we have Docker up and running, we can explore different options as to how we go about setting up the Minecraft server Docker container.</p>
+<p>I have found that the project at <a class="link" href="https://github.com/itzg/docker-minecraft-server"  target="_blank" rel="noopener"
+    >https://github.com/itzg/docker-minecraft-server</a> is a great starting place and it is what I will be using in this guide.</p>
+<blockquote>
+<p>You may want to use a different docker container such as <a class="link" href="https://github.com/itzg/docker-minecraft-bedrock-server"  target="_blank" rel="noopener"
+    >https://github.com/itzg/docker-minecraft-bedrock-server</a> in case you and your friends play on Minecraft: Bedrock Edition (Windows 10 Edition, and all the Mobile / Console editions are bedrock) although they won&rsquo;t be addressed much here.</p>
+</blockquote>
+<p>The first thing you may want to do is to download the latest image of itzg/minecraft-server <a class="link" href="https://hub.docker.com/r/itzg/minecraft-server"  target="_blank" rel="noopener"
+    >(available from Docker Hub)</a> by doing</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo docker pull itzg/minecraft-server:latest
+</span></span></code></pre></div><p>Then you want to create a folder which will contain all of the configuration files specific to your server. Make sure to remember (write down / document) where you keep this folder as it is important for actually running the Minecraft server.</p>
+<p>Usually it is a good idea to keep that folder in your home directory which is at <code>/home/username</code> depending on your username. A universal shortcut for your current user&rsquo;s home directory is <code>~</code> and when you login to your user you are by default, in your home directory.</p>
+<p>Check your current directory (on Ubuntu&rsquo;s bash cmd your directory is listed next to your username but you can use the <code>pwd</code> command to see it as well)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">user@minecraft-server:~/$ <span class="nb">pwd</span>
+</span></span><span class="line"><span class="cl">/home/user/
+</span></span></code></pre></div><p>Create your folder</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">mkdir minecraft-server
+</span></span></code></pre></div><p>Check that the folder exists with the <code>ls</code> command</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">user@minecraft-server:~/$ ls
+</span></span><span class="line"><span class="cl">minecraft-server
+</span></span></code></pre></div><p>Then you can enter the directory</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">cd</span> ./minecraft-server/
+</span></span></code></pre></div><p>There are two ways (that I know of) to provision a docker container.</p>
+<ol>
+<li>Use a command with arguments for each configuration of the container</li>
+<li>Use a <code>docker-compose.yml</code> file</li>
+</ol>
+<p>There are advantages and disadvantages to both.</p>
+<p>For example, commands are very quick to use and are good for running one-off, disposable docker containers to test things. One example is</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo docker run hello-world
+</span></span></code></pre></div><p>It is a short, straightforward command to test the hello-world container. You can add arguments to do things like attach network ports and data volumes and specify executing specific commands. You can also put all those things in a shell script such as <code>docker-hello-world.sh</code> which will contain the command along with its arguments so that you can run it with just one executable.</p>
+<p>The main drawback however, at least in my opinion, is readability and editability. It can be hard to easily dissect and understand a large, single command script with many arguments. Even a well made command like the one below still needs to use backslashes which could be easily messed up.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">docker run -d <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> --name jellyfin <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> --user uid:gid <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> --net<span class="o">=</span>host <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> --volume /path/to/config:/config <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> --volume /path/to/cache:/cache <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> --mount <span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/path/to/media,target<span class="o">=</span>/media <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> --restart<span class="o">=</span>unless-stopped <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> jellyfin/jellyfin
+</span></span></code></pre></div><p>A much more elegant solution, in my opinion, is <a class="link" href="https://docs.docker.com/compose/"  target="_blank" rel="noopener"
+    >Docker Compose</a> which allows you to put all of your arguments into a <code>docker-compose.yml</code> file (using the <a class="link" href="https://en.wikipedia.org/wiki/YAML"  target="_blank" rel="noopener"
+    >YAML</a> file format which can be edited in plain text editors).</p>
+<p>Here is a <code>docker-compose.yml</code> file which does the same as the script above (running a basic <a class="link" href="https://jellyfin.org/"  target="_blank" rel="noopener"
+    >Jellyfin</a> Docker container which is a self-hosted Streaming Service)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3.5&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">jellyfin</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">jellyfin/jellyfin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">jellyfin</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l">uid:gid</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">network_mode</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;host&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/path/to/config:/config</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/path/to/cache:/cache</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/path/to/media:/media</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">/path/to/media2:/media2:ro</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;unless-stopped&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># Optional - alternative address used for autodiscovery</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">JELLYFIN_PublishedServerUrl=http://example.com</span><span class="w">
+</span></span></span></code></pre></div><p>Sure, the file is bigger, but it is easier now for a human to read it and understand what it does. You can edit different options more confidently as the syntax is also more obvious.</p>
+<p>I will be using Docker Compose for the Minecraft server.</p>
+<p>The <code>docker-compose.yml</code> file for the default configuration of the server is</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">mc</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">itzg/minecraft-server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">25565</span><span class="p">:</span><span class="m">25565</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">EULA</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;TRUE&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">stdin_open</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span></code></pre></div><p>This is just the base, and we can add a lot more arguments which can improve the server.</p>
+<h4 id="add-a-message-of-the-day-motd">Add a Message Of The Day (MOTD)</h4>
+<p>This shows up as the server description in the Minecraft Client&rsquo;s server view so it&rsquo;s a good thing to have to easily identify your server.</p>
+<h4 id="server-icon-icon">Server Icon (ICON)</h4>
+<p>This is a URL to an icon image, it can be whatever you choose as it will automatically convert the image to the right size and format to be shown in the Minecraft Client.</p>
+<p><img src="./minecraft-client.png" alt="An Image of The Minecraft Client"  title="An Image of The Minecraft Client" /></p>
+<h4 id="timezone-tz">Timezone (TZ)</h4>
+<p>This is the timezone of your server which is applied to the time that is used in your logs, make sure that your host system&rsquo;s timezone is the same as that of the Docker container.</p>
+<h4 id="whitelist-players-whitelist">Whitelist Players (WHITELIST)</h4>
+<p>This is a pretty important security feature, you can make a list of players who are allowed to join your server which can prevent random unknown griefers from coming and destroying your server. It also makes it easy to quickly add and remove allowed players.</p>
+<h4 id="administrator-players-ops">Administrator Players (OPS)</h4>
+<p>This is a list of players who have admin powers over the server, this means that they can have cheats and can ban or kick players.</p>
+<h4 id="difficulty-difficulty">Difficulty (DIFFICULTY)</h4>
+<p>You can hard code the Difficulty of the server, I would probably set it to hard so that you can infect / cure zombie villagers with a 100% success rate but you can choose whatever difficulty (peaceful, easy, normal, hard) you like.</p>
+<h4 id="maximum-number-of-players-max_players">Maximum Number of Players (MAX_PLAYERS)</h4>
+<p>You can set this to ensure your server / network connection is not overloaded with too many players, by default the number is 20 although that may be too many for your server to handle.</p>
+<h4 id="view-distance-view_distance">View Distance (VIEW_DISTANCE)</h4>
+<p>This affects the maximum render distance a client can have, higher numbers are going to be very, very intensive, especially if there are many players. This setting depends on your specs, but you should test different render distances at increments of 4. The max I&rsquo;d say a client would reasonably want is 20 and see if the server struggles. If it does, go down to 16, then 12, then 8 and vice versa.</p>
+<h4 id="player-vs-player-combat-pvp">Player Vs Player Combat (PVP)</h4>
+<p>PVP is enabled by default, this may be a bit chaotic or against the values of your Minecraft server so you can disable it.</p>
+<h3 id="data-volumes">Data Volumes</h3>
+<p>Docker has a feature in which containers can store data in a &ldquo;Volume&rdquo;. This volume is a part of the host&rsquo;s native file system. In the example below, there is a volume attached called <code>minecraft-data</code>. This will create a directory called <code>minecraft-data</code> under the directory in which the <code>docker-compose.yml</code> file is stored. In my case the path of the directory will be <code>~/minecraft-server/minecraft-data</code>. This same directory is perceived to be the <code>/data</code> directory to the image inside of the Docker container.</p>
+<p>The purpose of doing this is so that I can easily access the data of the minecraft-server in that directory natively from my host OS so that I can run regular backups and do other things. It allows me to easily extract data like the actual Minecraft world of the server and transfer it to a new docker container. It is also useful when updating the Docker image of itzg/minecraft-server so that the world is persistent throughout newer versions of the image.</p>
+<p>A deeper and easier to understand explaination is available at <a class="link" href="https://docs.docker.com/storage/volumes/"  target="_blank" rel="noopener"
+    >https://docs.docker.com/storage/volumes/</a></p>
+<h3 id="final-docker-composeyml-file">Final <code>docker-compose.yml</code> File</h3>
+<p>Here is what a <code>docker-compose.yml</code> file with all of these options configured can look like</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;3&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">mc</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">itzg/minecraft-server</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">25565</span><span class="p">:</span><span class="m">25565</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">EULA</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;TRUE&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">MOTD</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;The Minecraft Server Of Arjdroid&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">ICON</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://github.com/Arjdroid/arjdroid.github.io/blob/main/image/P1181064.JPG&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">TZ</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Europe/London&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">WHITELIST</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Arjdroid&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">OPS</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Arjdroid&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">DIFFICULTY</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;hard&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">MAX_PLAYERS</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;50&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">VIEW_DISTANCE</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;16&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">PVP</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;false&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">stdin_open</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l">unless-stopped</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="c"># attach a directory relative to the directory containing this docker-compose.yml file</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">./minecraft-data:/data</span><span class="w">
+</span></span></span></code></pre></div><p>There are other options available as well but these are the ones I thought most important, you can check out the full list on the docker-minecraft-server github page <a class="link" href="https://github.com/itzg/docker-minecraft-server"  target="_blank" rel="noopener"
+    >https://github.com/itzg/docker-minecraft-server</a> and scroll down.</p>
+<p>You can test the configuration by running the docker container (while in the same directory as the <code>docker-compose.yml</code> file.</p>
+<pre tabindex="0"><code>user@minecraft-server:~/minecraft-server$ sudo docker compose up
+</code></pre><p>Now you need to add the server in your Minecraft client. You can go to the &ldquo;Multiplayer&rdquo; section of the Minecraft client, and then click the &ldquo;Add Server&rdquo; button. You can give the server whatever name you want.</p>
+<p>The &ldquo;Server Address&rdquo; section is quite important. You need to know the IP Address (or URL) of the host server in which you are running the Docker Minecraft Server. If it is a public cloud virtual machine then it will have a public IP that you should already know.</p>
+<p>For example, if your server has the public IP address 123.123.123.123. You need to enter 123.123.123.123 (This is assuming that you have set the Minecraft server&rsquo;s port to 25565 in the <code>docker-compose.yml</code> which is the default). If your server has a domain name such as example.net then you can enter that as the &ldquo;Server Address&rdquo;.</p>
+<p>If you are running the server on a computer on your local LAN, then for now, for testing purposes, you can use its local IP address which you need to find using your router settings or a command like <code>ifconfig</code> or <code>ip a</code> and usually the IP address will be 192.168.1.x. Your network may also have an internal DNS server (like Pi-Hole) which can assign individual, local, domain names to each and every computer on the network.</p>
+<p>If you are running the docker-minecraft-server on your own computer, you can simply type <code>localhost</code> into the &ldquo;Server Address&rdquo; section.</p>
+<p>Now you can test your Minecraft server by joining it through your Minecraft client and doing whatever you want and you can alter the settings as well.</p>
+<h2 id="networking-setup-port-forwarding">Networking Setup (Port Forwarding)</h2>
+<p>There is an additional step required to actually make your Minecraft Server accessible to the world if it is currently only accessible via a local IP address. You need to enable a network setting on your router called &ldquo;Port Forwarding&rdquo;.</p>
+<p>This will allow people from outside your network to access the specific port 25565 on your local minecraft server.</p>
+<h3 id="keep-in-mind-that-this-can-also-open-up-your-network-to-attacks-from-outside">Keep in mind that this can also open up your network to attacks from outside</h3>
+<p><strong>You do this at your own risk and this is not recommended to inexperienced network administrators.</strong></p>
+<p>Since you are running</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="https://arjdroid.github.io/tags/minecraft/">minecraft</a>
+        
+            <a href="https://arjdroid.github.io/tags/gaming/">gaming</a>
+        
+            <a href="https://arjdroid.github.io/tags/networking/">networking</a>
+        
+            <a href="https://arjdroid.github.io/tags/homelab/">homelab</a>
+        
+    </section>
+
+
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+        <h2 class="section-title">Related contents</h2>
+        <div class="related-contents">
+            <div class="flex article-list--tile">
+                
+                    
+<article class="has-image">
+    <a href="https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/">
+        
+        
+            <div class="article-image">
+                <img src="/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas_hu227b61606f8d971d1f6c07b446f98099_3382114_250x150_fill_q75_box_smart1.jpg" width="250" height="150" 
+                        loading="lazy" data-key="" data-hash="md5-TntvWSGMtRFzq9EI78Iqbg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Setting up a NAS on my Raspberry Pi</h2>
+        </div>
+    </a>
+</article>
+                
+            </div>
+        </div>
+    
+</aside>
+
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">&copy; 2022 The Droid Blog</section>
+    <section class="powerby">
+        Built with <b><a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a></b> with the <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener">Stack Theme by Jimmy Cai</a></b> and hosted with <b><a href="https://github.com" target="_blank" rel="noopener">Github Pages</a></b><br />
+        This Website is Open Source! Source Code <b><a href="https://github.com/Arjdroid/the_droid_blog-source_files">Here</a></b>
+    </section>
+</footer>
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true" style="display:none">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+            </main>
+        </div>
+        
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<link rel="stylesheet" href="/css/highlight/light.min.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="/css/highlight/dark.min.css" media="(prefers-color-scheme: dark)">
+
+
+    </body>
+</html>
