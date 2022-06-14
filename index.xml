@@ -276,7 +276,12 @@ For more information you should check out the Docker documentation at &lt;a clas
 &lt;p&gt;This will allow people from outside your network to access the specific port 25565 on your local minecraft server.&lt;/p&gt;
 &lt;h3 id=&#34;keep-in-mind-that-this-can-also-open-up-your-network-to-attacks-from-outside&#34;&gt;Keep in mind that this can also open up your network to attacks from outside&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;You do this at your own risk and this is not recommended to inexperienced network administrators.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Since you are running&lt;/p&gt;
+&lt;p&gt;You need to know what model is your router and look up the instructions to set up port forwarding on that specific router. The port you are forwarding is 25565 and the IP address will be the local IP address of the Minecraft server.&lt;/p&gt;
+&lt;p&gt;More detailed instructions will require knowledge of your specific setup. I trust that your abilities to use a search engine will suffice in getting you there.&lt;/p&gt;
+&lt;p&gt;With that, I think you have the knowledge you need to get started as a Minecraft server administrator.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Thank you for reading!&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
         </item>
         <item>
