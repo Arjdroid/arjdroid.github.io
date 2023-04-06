@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gaming on The Droid Blog</title>
-    <link>https://arjdroid.github.io/categories/gaming/</link>
+    <link>https://arjdroid.me/categories/gaming/</link>
     <description>Recent content in gaming on The Droid Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.github.io/categories/gaming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/categories/gaming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hosting my own Minecraft Server with Docker on Linux</title>
-      <link>https://arjdroid.github.io/p/hosting-my-own-minecraft-server-with-docker-on-linux/</link>
+      <link>https://arjdroid.me/p/hosting-my-own-minecraft-server-with-docker-on-linux/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://arjdroid.github.io/p/hosting-my-own-minecraft-server-with-docker-on-linux/</guid>
+      <guid>https://arjdroid.me/p/hosting-my-own-minecraft-server-with-docker-on-linux/</guid>
       <description>Disclaimer: This guide is a general overview, please also do additional research before following. If you plan on using this article as a guide for setting up your OWN Minecraft (Java Edition) server, PLEASE read the entire article before going through with this process (It may help clear any doubts you have as well as ensure that you can go through with this process). Also, do remember that I AM NOT RESPONSIBLE for any damage that YOU may cause to yourself or your own hardware including, but not limited to: bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed.</description>
     </item>
     

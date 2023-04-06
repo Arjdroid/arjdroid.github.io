@@ -4,17 +4,17 @@
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='This blog post details the steps I took in setting up a N.A.S on my Raspberry Pi.'><title>Setting up a NAS on my Raspberry Pi</title>
 
-    <link rel='canonical' href='https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/'>
+    <link rel='canonical' href='https://arjdroid.me/p/setting-up-a-nas-on-my-raspberry-pi/'>
 
 <link rel="stylesheet" href="/scss/style.min.css">
 <meta property='og:title' content='Setting up a NAS on my Raspberry Pi'>
 <meta property='og:description' content='This blog post details the steps I took in setting up a N.A.S on my Raspberry Pi.'>
-<meta property='og:url' content='https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/'>
+<meta property='og:url' content='https://arjdroid.me/p/setting-up-a-nas-on-my-raspberry-pi/'>
 <meta property='og:site_name' content='The Droid Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='raspberrypi' /><meta property='article:tag' content='networking' /><meta property='article:published_time' content='2020-10-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-10-23T00:00:00&#43;00:00'/><meta property='og:image' content='https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='raspberrypi' /><meta property='article:tag' content='networking' /><meta property='article:published_time' content='2020-10-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-10-23T00:00:00&#43;00:00'/><meta property='og:image' content='https://arjdroid.me/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas.jpg' />
 <meta name="twitter:title" content="Setting up a NAS on my Raspberry Pi">
 <meta name="twitter:description" content="This blog post details the steps I took in setting up a N.A.S on my Raspberry Pi."><meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content='https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas.jpg' /></head>
+	<meta name="twitter:image" content='https://arjdroid.me/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas.jpg' /></head>
 <body class="">
         <div class="container flex on-phone--column align-items--flex-start extended article-page with-toolbar">
             <aside class="sidebar left-sidebar sticky">
@@ -38,7 +38,7 @@
                 <span class="emoji">🖥️</span>
             </figure>
         
-        <h1 class="site-name"><a href="https://arjdroid.github.io">The Droid Blog</a></h1>
+        <h1 class="site-name"><a href="https://arjdroid.me">The Droid Blog</a></h1>
         <h2 class="site-description">Computer Wizard In Training</h2>
     </header>
 
@@ -48,7 +48,7 @@
         
 
         <li >
-            <a href='https://arjdroid.github.io/'>
+            <a href='https://arjdroid.me/'>
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -67,7 +67,7 @@
         
 
         <li >
-            <a href='https://arjdroid.github.io/about'>
+            <a href='https://arjdroid.me/about'>
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -85,26 +85,7 @@
         
 
         <li >
-            <a href='https://arjdroid.github.io/archives'>
-                
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <rect x="3" y="4" width="18" height="4" rx="2" />
-  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
-  <line x1="10" y1="12" x2="14" y2="12" />
-</svg>
-
-
-
-                
-                <span>Archives</span>
-            </a>
-        </li>
-        
-        
-
-        <li >
-            <a href='https://arjdroid.github.io/p/rss'>
+            <a href='https://arjdroid.me/p/rss'>
                 
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
@@ -124,7 +105,7 @@
 </aside>
             <main class="main full-width">
     <div id="article-toolbar">
-        <a href="https://arjdroid.github.io" class="back-home">
+        <a href="https://arjdroid.me" class="back-home">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z"/>
   <polyline points="15 6 9 12 15 18" />
@@ -150,7 +131,7 @@
     
     <header class="article-category">
         
-            <a href="https://arjdroid.github.io/categories/raspberrypi/" 
+            <a href="https://arjdroid.me/categories/raspberrypi/" 
                     class="color-tag"
                     data-image="/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas_hu227b61606f8d971d1f6c07b446f98099_3382114_20x20_fill_q75_box_smart1.jpg" 
                     data-key="" 
@@ -159,7 +140,7 @@
                 </a>
             
         
-            <a href="https://arjdroid.github.io/categories/networking/" 
+            <a href="https://arjdroid.me/categories/networking/" 
                     class="color-tag"
                     data-image="/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas_hu227b61606f8d971d1f6c07b446f98099_3382114_20x20_fill_q75_box_smart1.jpg" 
                     data-key="" 
@@ -172,7 +153,7 @@
     
 
     <h2 class="article-title">
-        <a href="https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/">Setting up a NAS on my Raspberry Pi</a>
+        <a href="https://arjdroid.me/p/setting-up-a-nas-on-my-raspberry-pi/">Setting up a NAS on my Raspberry Pi</a>
     </h2>
 
     
@@ -198,10 +179,10 @@
 </blockquote>
 <h2 id="introduction">Introduction</h2>
 <p>So, this project all started when my old faithful Windows PC started giving up so I had to temporarily work from my Macbook.
-It was fine for the most part except that I didn&rsquo;t have access to most of the files on my 2 Terrabyte hard drive, that was a real problem because those files would&rsquo;ve saved me a lot of time&hellip;</p>
+It was fine for the most part except that I didn&rsquo;t have access to most of the files on my 2 Terabyte hard drive, that was a real problem because those files would&rsquo;ve saved me a lot of time&hellip;</p>
 <p>So, my father and I decided to setup a N.A.S!</p>
 <p>Easy right? Not really&hellip;</p>
-<p>There are a lot of options in terms of N.A.S storage devices, you could buy one of those pre-configured N.A.S boxes with their propreitary software and hardware which, if they break, you&rsquo;re out of luck, they&rsquo;re also often times really expensive!
+<p>There are a lot of options in terms of N.A.S storage devices, you could buy one of those pre-configured N.A.S boxes with their proprietary software and hardware which, if they break, you&rsquo;re out of luck, they&rsquo;re also often times really expensive!
 So, what better alternative to closed sources and proprietary hardware than to use open source!
 Enter: Raspberry Pi; a tiny credit card sized fully functioning computer that is great for D.I.Y projects.
 So it was decided that the Raspberry Pi4 would be the brains of the operation, N.A.S operation, at least at this small scale, isn&rsquo;t a really compute heavy process so we decreed that a 2GB Model of the Raspberry Pi4 would be sufficient for the task.</p>
@@ -247,7 +228,7 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 <p>Under the disk information, it would give <code>Device</code> information, each <code>Device</code> is a volume or partition on the drive, each partition is named with the name of the disk suffixed with the partition number if it is a logical primary partition.</p>
 <p>In the sample partition I gave was <code>/dev/sda1</code>, it is the only partition in the drive and as you can see, it&rsquo;s <code>End</code> byte is the last byte in the whole drive so it&rsquo;s size encompasses the entire drive.</p>
 <p>This is the volume that you will be mounting using as the &lsquo;drive&rsquo;.</p>
-<h3 id="incase-your-drive-is-un-initialised-doesnt-have-any-partitions--volumes-or-you-want-to-start-off-fresh">Incase Your Drive Is Un-Initialised (Doesn&rsquo;t Have Any Partitions / Volumes) OR You Want To Start Off Fresh</h3>
+<h3 id="in-case-your-drive-is-un-initialised-doesnt-have-any-partitions--volumes-or-you-want-to-start-off-fresh">In case Your Drive Is Un-Initialised (Doesn&rsquo;t Have Any Partitions / Volumes) OR You Want To Start Off Fresh</h3>
 <blockquote>
 <p>Run the partition editor for that drive;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo fdisk -l /dev/sda
@@ -274,7 +255,7 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 </span></span></code></pre></div><p>It is a good idea to recheck the name of the volume before mounting it;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo fdisk -l
 </span></span></code></pre></div><p>Great! Now you&rsquo;ve mounted your drive!</p>
-<p>Incase you need to unmount the drive (if you&rsquo;re disconnecting the cable, PLEASE unmount before doing so.)</p>
+<p>In case you need to unmount the drive (if you&rsquo;re disconnecting the cable, PLEASE unmount before doing so.)</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo umount /dev/sda1
 </span></span></code></pre></div><h2 id="setting-up-the-smbd-samba-share-server">Setting Up The SMBD (samba share) Server</h2>
 <p>An SMBD (samba share) server allows file sharing because it appears as a network drive which can be accessed by any device on the network that is permitted to access it.</p>
@@ -286,7 +267,7 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 <p>Now that our repositories are up to date, we can install the samba program;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt install samba samba-common
 </span></span></code></pre></div><p>If it prompts you for anything, just say &lsquo;Yes&rsquo;</p>
-<p>Now you should edit <code>smb.conf</code>, the file that contains the samaba server configuration;</p>
+<p>Now you should edit <code>smb.conf</code>, the file that contains the samba server configuration;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo nano /etc/samba/smb.conf
 </span></span></code></pre></div><p>This will open up the nano text editor which will allow you to modify the <code>smb.conf</code> file. Now, you want to go to the end of the file you can do this either with <code>CTRL + END</code> or you can just keep spamming the down arrow key if that isn&rsquo;t possible.</p>
 <p>At the bottom of the <code>smb.conf</code> file, you should enter the details as such;</p>
@@ -296,7 +277,7 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 </span></span><span class="line"><span class="cl">create <span class="nv">mask</span> <span class="o">=</span> <span class="m">0777</span>
 </span></span><span class="line"><span class="cl">directory <span class="nv">mask</span> <span class="o">=</span> <span class="m">0777</span>
 </span></span><span class="line"><span class="cl"><span class="nv">public</span> <span class="o">=</span> yes
-</span></span></code></pre></div><p>Remember to replace <code>HDD100G</code> with the names that you have used. The writeable toggle is pretty self-explanatory, the create and directory mask values are values that allow all smb users to read, modify and delete the files on that drive, if you wish to set a different set of values for the masks, a quick <a class="link" href="" >insert your preffered search engine</a> search should help you out, although you should know that these masks should work perfectly fine for you. The public toggle means that in your LAN, the network location will be visible under the Pi&rsquo;s hostname, in this case, raspberrypi.</p>
+</span></span></code></pre></div><p>Remember to replace <code>HDD100G</code> with the names that you have used. The writeable toggle is pretty self-explanatory, the create and directory mask values are values that allow all smb users to read, modify and delete the files on that drive, if you wish to set a different set of values for the masks, a quick <a class="link" href="" >insert your preferred search engine</a> search should help you out, although you should know that these masks should work perfectly fine for you. The public toggle means that in your LAN, the network location will be visible under the Pi&rsquo;s hostname, in this case, raspberrypi.</p>
 <p>Now, we need to add a password for the current smb share user, in this case, pi. This username and password will allow you to access the smb share files. To add a password to the current user, pi do this;</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo smbpasswd -a pi
 </span></span></code></pre></div><p>You can now enter the password you want to enter, this password doesn&rsquo;t have to be the same password as your user password for accessing the system.</p>
@@ -324,9 +305,9 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
     
     <section class="article-tags">
         
-            <a href="https://arjdroid.github.io/tags/raspberrypi/">raspberrypi</a>
+            <a href="https://arjdroid.me/tags/raspberrypi/">raspberrypi</a>
         
-            <a href="https://arjdroid.github.io/tags/networking/">networking</a>
+            <a href="https://arjdroid.me/tags/networking/">networking</a>
         
     </section>
 
@@ -345,7 +326,7 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
                 
                     
 <article class="has-image">
-    <a href="https://arjdroid.github.io/p/hosting-my-own-minecraft-server-with-docker-on-linux/">
+    <a href="https://arjdroid.me/p/hosting-my-own-minecraft-server-with-docker-on-linux/">
         
         
             <div class="article-image">
@@ -371,7 +352,7 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
     
 
     <footer class="site-footer">
-    <section class="copyright">&copy; 2022 The Droid Blog</section>
+    <section class="copyright">&copy; 2023 The Droid Blog</section>
     <section class="powerby">
         Built with <b><a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a></b> with the <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener">Stack Theme by Jimmy Cai</a></b> and hosted with <b><a href="https://github.com" target="_blank" rel="noopener">Github Pages</a></b><br />
         This Website is Open Source! Source Code <b><a href="https://github.com/Arjdroid/the_droid_blog-source_files">Here</a></b>

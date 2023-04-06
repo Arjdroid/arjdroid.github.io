@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pages on The Droid Blog</title>
-    <link>https://arjdroid.github.io/page/</link>
+    <link>https://arjdroid.me/page/</link>
     <description>Recent content in Pages on The Droid Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.github.io/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
-      <link>https://arjdroid.github.io/about/</link>
+      <link>https://arjdroid.me/about/</link>
       <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://arjdroid.github.io/about/</guid>
+      <guid>https://arjdroid.me/about/</guid>
       <description>About Me I am Arjun, the maker/owner of this blog.
 I like almost all things computer related, and am a big fan of open-source technologies. I also like other things like playing videogames, doing sports (mostly Basketball these days), eating food, travelling, reading, photography and hanging out with my friends.
 Additionally, I am a licensed ham radio operator in my home country, India. My callsign (restricted grade) is VU3EWS.

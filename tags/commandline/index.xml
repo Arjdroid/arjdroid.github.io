@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>commandline on The Droid Blog</title>
-    <link>https://arjdroid.github.io/tags/commandline/</link>
+    <link>https://arjdroid.me/tags/commandline/</link>
     <description>Recent content in commandline on The Droid Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.github.io/tags/commandline/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/tags/commandline/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Customising a UNIX Terminal</title>
-      <link>https://arjdroid.github.io/p/customising-a-unix-terminal/</link>
+      <link>https://arjdroid.me/p/customising-a-unix-terminal/</link>
       <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://arjdroid.github.io/p/customising-a-unix-terminal/</guid>
+      <guid>https://arjdroid.me/p/customising-a-unix-terminal/</guid>
       <description>Introduction When you spend a lot of your time working on a command line interface, it&amp;rsquo;s pretty important (at least for me) to make sure that you like how your command line looks and that it is an efficient environment that can boost your productivity in your command line workflow.
 A customised terminal is unique and brings the personality of the user into the console, highlighting what the user thinks is important, as well as bringing in a little style to stand out from the boring black and white terminals with a single dollar sign line indicator.</description>
     </item>

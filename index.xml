@@ -2,17 +2,91 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>The Droid Blog</title>
-        <link>https://arjdroid.github.io/</link>
+        <link>https://arjdroid.me/</link>
         <description>Recent content on The Droid Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 09 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 23 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Participating in a 24 hour hackathon</title>
+        <link>https://arjdroid.me/p/participating-in-a-24-hour-hackathon/</link>
+        <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://arjdroid.me/p/participating-in-a-24-hour-hackathon/</guid>
+        <description>&lt;img src="https://arjdroid.me/p/participating-in-a-24-hour-hackathon/coverphoto.jpg" alt="Featured image of post Participating in a 24 hour hackathon" /&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;A little over a month ago, I decided to participate in an upcoming hackathon. For those not in the know, a &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Hackathon&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hackathon&lt;/a&gt;, sometimes also called a codefest, is an event where people work in teams to rapidly develop a product within a set time limit. They can come in the form of a competition where the goal is for one team to win, or, when hosted by a company, to complete the implementation of a feature in their product.&lt;/p&gt;
+&lt;p&gt;They are usually 24 hours continuous, but some can span to two or three days.&lt;/p&gt;
+&lt;p&gt;I haven&amp;rsquo;t really had much formal coding experience, never sticking to those long-winded language tutorials that start from the ground up. Instead I mostly just jumped around and played with things like linux and docker, making the occasional python or shell script, as this blog has shown.&lt;/p&gt;
+&lt;p&gt;This was going to be the first time I did some &amp;lsquo;real&amp;rsquo; programming; I was very excited.&lt;/p&gt;
+&lt;h2 id=&#34;advice&#34;&gt;Advice&lt;/h2&gt;
+&lt;p&gt;I don&amp;rsquo;t want to bore you with the minute-by-minute details so let me just list some advice I wish I knew beforehand as well as advice I thought would be obvious to others but I guess it was not&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;Preparation&lt;/li&gt;
+&lt;li&gt;Equipment&lt;/li&gt;
+&lt;li&gt;Caffeine&lt;/li&gt;
+&lt;li&gt;Focus on the Timeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;preparation&#34;&gt;Preparation&lt;/h3&gt;
+&lt;p&gt;This was obviously the most timetaking aspect of the hackathon but also one of the most important. I took the approach that made the most sense to me. I first formulated what I wanted to create for the competition, in my case an Environmentally Friendly Route Planning App. It fit into two of the competition&amp;rsquo;s available themes: Environmental Sustainability and Transportation.&lt;/p&gt;
+&lt;p&gt;You should tailor your project towards the requirements of the hackathon, following whatever themes and other specifications they lay out.&lt;/p&gt;
+&lt;h4 id=&#34;tech-stack&#34;&gt;Tech Stack&lt;/h4&gt;
+&lt;p&gt;I also carefully thought about the tech stack I was going to use. My first choice was to go for a traditional web-app built with HTML + CSS + JS, and I did extensive research over the course of two weeks to ascertain the viability of this. Ultimately, I didn&amp;rsquo;t like the structure as it would branch out to be more complex than I wanted, requiring backend servers and things of that sort, so I instead opted to shift to a mobile app.&lt;/p&gt;
+&lt;p&gt;This is where I stumbled across &lt;a class=&#34;link&#34; href=&#34;flutter.dev&#34; &gt;Flutter&lt;/a&gt;. It&amp;rsquo;s a cross-platform open-source framework by Google to develop apps for Android, Linux, macOS, iOS, Windows and the Web all from one codebase. I also compared it to Facebook&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;reactnative.dev&#34; &gt;React Native&lt;/a&gt; but I preferred flutter so I started work on learning the in&amp;rsquo;s and out&amp;rsquo;s of it.&lt;/p&gt;
+&lt;p&gt;During this time I also found all the relevant API&amp;rsquo;s I wanted to use (such as OpenWeather and GoogleMapsPlatform) and figured out how they&amp;rsquo;d fit into my app.&lt;/p&gt;
+&lt;p&gt;And definitely don&amp;rsquo;t forget to set up all your API keys beforehand; I made the mistake of not properly choosing my weather API, forcing me to switch last minute, only to find out that my freshly minted API key would take 2 hours to initialise before I was allowed to use it!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Settle on a proper tech stack that suits your needs&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;team-members&#34;&gt;Team Members&lt;/h4&gt;
+&lt;p&gt;My next step was to recruit team members. This was quite difficult as my strategy was quite different from most other teams I saw, which already had a group of friends that formed a team and then came up with an idea.&lt;/p&gt;
+&lt;p&gt;After screening a lot of potential team members from my school, I narrowed down my list and interviewed until I found a good fit. The max team size allowed was 5 but I kept only 3 members. I initially planned to go solo (most of the winning teams I saw were solo too) but decided that the workload would be more bearable with teammates and it would also be more fun.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Find people you can work well with, and maintain an agreed upon team structure to avoid unnecessary conflicts&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I also had daily meetings with my team members over the 2 weeks before the competition to ensure we were always on the same page regarding things, as well as sharing ideas for our project vision and discussing technological complications&lt;/p&gt;
+&lt;h4 id=&#34;practice&#34;&gt;Practice&lt;/h4&gt;
+&lt;p&gt;This was especially important for me as I had little previous experience whatsoever with using the Dart programming language (part of Flutter) or even making full-fledged applications in general. Up until then, I had focused primarily on bash and python scripts along with the occasional static website here and there as well as this blog itself. My interests always laid more towards the Linux Administration / Networking side of things.&lt;/p&gt;
+&lt;p&gt;Over the few weeks before the competition, I focused intensely on mini-projects to learn the in&amp;rsquo;s and out&amp;rsquo;s of the languages and API&amp;rsquo;s I&amp;rsquo;d be using so I was well versed. I also allotted projects to my teammates to ensure they&amp;rsquo;d be capable of handling the UI components which is what I&amp;rsquo;d brought them on for since I didn&amp;rsquo;t want to get bogged down doing UI rather than what I really wanted.&lt;/p&gt;
+&lt;p&gt;I must&amp;rsquo;ve made half a dozen private GitHub repos in that short period of time.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Practice well and ensure you&amp;rsquo;re thorough with any and all technologies you might use in the hackathon. Mini-projects are great for this as you pick up the exact practical skills you need, without wasting time on the basics.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;equipment&#34;&gt;Equipment&lt;/h3&gt;
+&lt;p&gt;You can&amp;rsquo;t perform your best if your equipment is holding you back. Although most of this might be completely unnecessary, and definitely &lt;em&gt;can&amp;rsquo;t compensate for a gap in proficiency&lt;/em&gt;, they definitely do make life easier.&lt;/p&gt;
+&lt;p&gt;One of the simplest pieces of equipment I chose to carry, a &lt;strong&gt;&lt;em&gt;power-strip&lt;/em&gt;&lt;/strong&gt;, turned out to be crucial since we were offered just a single plug point so that 4-plug power-strip was a life-saver and sustained my team throughout the entire competition.&lt;/p&gt;
+&lt;p&gt;I also brought with me a dedicated &lt;strong&gt;&lt;em&gt;data dongle&lt;/em&gt;&lt;/strong&gt; (a small, portable access point that uses LTE for its uplink) as I was unsure whether the event-provided internet would hold up to my needs (and those of the literally hundreds of other participants). And thank goodness I did because I ended up using it the entire competition.&lt;/p&gt;
+&lt;p&gt;My &lt;strong&gt;&lt;em&gt;noise-cancelling headphones&lt;/em&gt;&lt;/strong&gt; were also instrumental in helping me focus on my work. The background noise from packing hundreds of excited people in close quarters was as you&amp;rsquo;d expect, making it impossible to not get distracted. I&amp;rsquo;d occasionally slide one ear out of the headphones to converse with my teammates but other than that, it was smooth sailing.&lt;/p&gt;
+&lt;p&gt;Deodorant &amp;amp; a toothbrush - do I need to elaborate?&lt;/p&gt;
+&lt;p&gt;Something I wish I&amp;rsquo;d brought but didn&amp;rsquo;t was an external mouse. I was used to using my laptop for short stints with the trackpad while comfortably utilising my desktop at home for longer sessions but I&amp;rsquo;d overlooked the need for a mouse with my laptop. As great as the trackpad on your laptop might be, a mouse is easier on the wrist, at least for me.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Plan and bring what you need beforehand to minimise distractions and unnecessary worries&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;caffeine&#34;&gt;Caffeine&lt;/h3&gt;
+&lt;p&gt;I gave this a separate category because I was just surprised by the sheer volume I consumed; it would not be practical to bring this amount of coffee on your own. Initially, I thought that I&amp;rsquo;d drink just the one cup of coffee to really wake up in the morning after having a short nap at midnight (I even brought a sleeping bag for this). Little did I know, I&amp;rsquo;d end up chugging through the whole night with 12 shots of espresso, frantically attempting to implement different functions and fixing merge conflicts.&lt;/p&gt;
+&lt;p&gt;I would not advise such reckless consumption of caffeine, although it definitely helped me stay up for a long time. I only napped for half an hour before the final hour of the hackathon, after that I was up for another 12.&lt;/p&gt;
+&lt;p&gt;However, if you were to consume such quantities, I do think that coffee or tea are preferrable to &amp;rsquo;energy&amp;rsquo; drinks, I particularly do not like them although I have witnessed many a friend down entire cans in mere minutes. Energy drinks contain a lot more additives apart from caffeine, namely sugar, which tend to make them less conducive to good long term health.&lt;/p&gt;
+&lt;h3 id=&#34;focus-on-the-timeline&#34;&gt;Focus on the Timeline&lt;/h3&gt;
+&lt;p&gt;This is one mistake I noticed a lot of teams (including my own to some extent) making. Every hackathon is different, but they usually have audits conducted by the organisers / judges at regular intervals where they review your current progress and milestones.&lt;/p&gt;
+&lt;p&gt;As you start coding, you may realise that your estimates on how long you&amp;rsquo;d take to implement features may change drastically, sometimes quicker but more often slower than you&amp;rsquo;d expected. It&amp;rsquo;s essential to be flexible about re-thinking what you can and cannot achieve in your limited time frame. Don&amp;rsquo;t succumb to the &lt;a class=&#34;link&#34; href=&#34;https://thedecisionlab.com/biases/the-sunk-cost-fallacy&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;sunk-cost fallacy&lt;/a&gt; - pouring more time (&amp;amp; other resources) into a dead-end, even after you know it&amp;rsquo;s a dead, because you&amp;rsquo;ve already &amp;lsquo;sunk&amp;rsquo; so much into it.&lt;/p&gt;
+&lt;p&gt;There will probably be features that you have to abandon, even if you spent hours to get half-way into implementing it, to make sure that you get to the finish line with a presentable project.&lt;/p&gt;
+&lt;p&gt;With this, I conclude my short list of advice I would&amp;rsquo;ve wanted to be given in a concise manner before embarking upon my first hackathon.&lt;/p&gt;
+&lt;p&gt;If you are considering participating in one, I highly recommend it. You learn a lot and hopefully, make many friends along the way. It also went a long way in demystifying &amp;lsquo;programming&amp;rsquo; in general for me.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Thank you for reading!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
         <title>Hosting my own Minecraft Server with Docker on Linux</title>
-        <link>https://arjdroid.github.io/p/hosting-my-own-minecraft-server-with-docker-on-linux/</link>
+        <link>https://arjdroid.me/p/hosting-my-own-minecraft-server-with-docker-on-linux/</link>
         <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://arjdroid.github.io/p/hosting-my-own-minecraft-server-with-docker-on-linux/</guid>
-        <description>&lt;img src="https://arjdroid.github.io/p/hosting-my-own-minecraft-server-with-docker-on-linux/minecraft-server.png" alt="Featured image of post Hosting my own Minecraft Server with Docker on Linux" /&gt;&lt;blockquote&gt;
+        <guid>https://arjdroid.me/p/hosting-my-own-minecraft-server-with-docker-on-linux/</guid>
+        <description>&lt;img src="https://arjdroid.me/p/hosting-my-own-minecraft-server-with-docker-on-linux/minecraft-server.png" alt="Featured image of post Hosting my own Minecraft Server with Docker on Linux" /&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: This guide is a general overview, please also do additional research before following. If you plan on using this article as a guide for setting up your OWN Minecraft (Java Edition) server, &lt;strong&gt;PLEASE&lt;/strong&gt; read the entire article before going through with this process (It may help clear any doubts you have as well as ensure that you can go through with this process). Also, do remember that &lt;strong&gt;I AM NOT RESPONSIBLE&lt;/strong&gt; for any damage that YOU may cause to yourself or your own hardware including, but not limited to: bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed. YOU are choosing to make these modifications, and I provide no guarantees of any sort.&lt;/p&gt;
 &lt;p&gt;Also, you might want to zoom in / out to adjust the webpage to your liking.&lt;/p&gt;
 &lt;h3 id=&#34;_this-guide-is-slightly-advanced-and-not-recommended-to-blindly-follow-especially-for-those-unfamiliar-with-using-linux-but-please-feel-free-to-go-over-it_&#34;&gt;&lt;em&gt;&lt;strong&gt;This guide is slightly advanced and not recommended to blindly follow especially for those unfamiliar with using Linux but please feel free to go over it&lt;/strong&gt;&lt;/em&gt;&lt;/h3&gt;
@@ -123,7 +197,7 @@ To delete an old container you must first know the name or the id of the contain
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CONTAINER ID   IMAGE         COMMAND    CREATED         STATUS                     PORTS   NAMES
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;aaa7aab55ac1   hello-world   &lt;span class=&#34;s2&#34;&gt;&amp;#34;/hello&amp;#34;&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; minutes ago   Exited &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; minutes ago           eager_haibt
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;5f4294d34628   ubuntu        &lt;span class=&#34;s2&#34;&gt;&amp;#34;bash&amp;#34;&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; minutes ago   Exited &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;0&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; minutes ago           modest_banzai
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Suppose I want to delete the ubuntu container for whatever reason,I simply have to execute the following command:&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Suppose I want to delete the ubuntu container for whatever reason, I simply have to execute the following command:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo docker rmi aaa7aab55ac1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can replace the container ID with that of whichever container you want to delete
 For more information you should check out the Docker documentation at &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -233,7 +307,7 @@ For more information you should check out the Docker documentation at &lt;a clas
 &lt;h3 id=&#34;data-volumes&#34;&gt;Data Volumes&lt;/h3&gt;
 &lt;p&gt;Docker has a feature in which containers can store data in a &amp;ldquo;Volume&amp;rdquo;. This volume is a part of the host&amp;rsquo;s native file system. In the example below, there is a volume attached called &lt;code&gt;minecraft-data&lt;/code&gt;. This will create a directory called &lt;code&gt;minecraft-data&lt;/code&gt; under the directory in which the &lt;code&gt;docker-compose.yml&lt;/code&gt; file is stored. In my case the path of the directory will be &lt;code&gt;~/minecraft-server/minecraft-data&lt;/code&gt;. This same directory is perceived to be the &lt;code&gt;/data&lt;/code&gt; directory to the image inside of the Docker container.&lt;/p&gt;
 &lt;p&gt;The purpose of doing this is so that I can easily access the data of the minecraft-server in that directory natively from my host OS so that I can run regular backups and do other things. It allows me to easily extract data like the actual Minecraft world of the server and transfer it to a new docker container. It is also useful when updating the Docker image of itzg/minecraft-server so that the world is persistent throughout newer versions of the image.&lt;/p&gt;
-&lt;p&gt;A deeper and easier to understand explaination is available at &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/storage/volumes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;A deeper and easier to understand explanation is available at &lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/storage/volumes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://docs.docker.com/storage/volumes/&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;final-docker-composeyml-file&#34;&gt;Final &lt;code&gt;docker-compose.yml&lt;/code&gt; File&lt;/h3&gt;
 &lt;p&gt;Here is what a &lt;code&gt;docker-compose.yml&lt;/code&gt; file with all of these options configured can look like&lt;/p&gt;
@@ -286,18 +360,18 @@ For more information you should check out the Docker documentation at &lt;a clas
         </item>
         <item>
         <title>Customising a UNIX Terminal</title>
-        <link>https://arjdroid.github.io/p/customising-a-unix-terminal/</link>
+        <link>https://arjdroid.me/p/customising-a-unix-terminal/</link>
         <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://arjdroid.github.io/p/customising-a-unix-terminal/</guid>
-        <description>&lt;img src="https://arjdroid.github.io/p/customising-a-unix-terminal/myterminal.jpg" alt="Featured image of post Customising a UNIX Terminal" /&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+        <guid>https://arjdroid.me/p/customising-a-unix-terminal/</guid>
+        <description>&lt;img src="https://arjdroid.me/p/customising-a-unix-terminal/myterminal.jpg" alt="Featured image of post Customising a UNIX Terminal" /&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;When you spend a lot of your time working on a command line interface, it&amp;rsquo;s pretty important (at least for me) to make sure that you like how your command line looks and that it is an efficient environment that can boost your productivity in your command line workflow.&lt;/p&gt;
 &lt;p&gt;A customised terminal is unique and brings the personality of the user into the console, highlighting what the user thinks is important, as well as bringing in a little style to stand out from the boring black and white terminals with a single dollar sign line indicator.&lt;/p&gt;
 &lt;p&gt;There are many ways to go about customising your terminal, from using automated shell scripts all the way to hand editing your &lt;code&gt;.bashrc&lt;/code&gt; or &lt;code&gt;.zshrc&lt;/code&gt; files, all depending upon on how much time you want to spend on such a task.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h3 id=&#34;prerequisites&#34;&gt;Prerequisites:&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;A UNIX-like terminal interface either on macOS or Linux (no Powershell but WSL does count as Linux)&lt;/li&gt;
+&lt;li&gt;A UNIX-like terminal interface either on macOS or Linux (no PowerShell but WSL does count as Linux, I&amp;rsquo;m also not supporting BSD at this time)&lt;/li&gt;
 &lt;li&gt;Some knowledge on working with a terminal interface&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
@@ -310,7 +384,7 @@ For more information you should check out the Docker documentation at &lt;a clas
 &lt;p&gt;Take &lt;a class=&#34;link&#34; href=&#34;https://iterm2.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;iTerm2&lt;/a&gt; for example, it is another macOS focused Terminal Emulator, that is also open source and has a boat load of features. It is very popular and is comparable in terms of customisability. I&amp;rsquo;d say it is just really dependent on personal preference whether you should go for the default macOS &amp;ldquo;Terminal&amp;rdquo; or iTerm2 as they are both really solid options.&lt;/p&gt;
 &lt;p&gt;One other macOS Terminal emulator that comes to mind is &lt;a class=&#34;link&#34; href=&#34;https://alacritty.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Alacritty&lt;/a&gt;. It is a very different choice from the others mentioned thus far. Firstly, it is quite a lot less feature packed as the alternatives, it doesn&amp;rsquo;t have many features that others may consider basic such as tabs. All configuration is done via editing of the &lt;code&gt;alacritty.yml&lt;/code&gt; YAML file rather than a Graphical User Interface. It isn&amp;rsquo;t as &amp;ldquo;User Friendly&amp;rdquo; but is extremely customisable and blazingly fast at executing commands due to its GPU accelerated nature providing a noticable improvement in speed on some machines. It is the least polished Terminal Emulator of the three as it is still consiered to be at a beta level of readiness and the developers aren&amp;rsquo;t very &amp;ldquo;friendly&amp;rdquo; to macOS as, though they provide a macOS .dmg installer you are required to jump through a few hoops in terms of allowing the software to bypass macOS&amp;rsquo; Gateway in order to run the software because it is not actually Apple notarized so it has not been certified as &amp;ldquo;Not Malware&amp;rdquo; in Apple&amp;rsquo;s eyes.&lt;/p&gt;
+    &gt;Alacritty&lt;/a&gt;. It is a very different choice from the others mentioned thus far. Firstly, it is quite a lot less feature packed as the alternatives, it doesn&amp;rsquo;t have many features that others may consider basic such as tabs. All configuration is done via editing of the &lt;code&gt;alacritty.yml&lt;/code&gt; YAML file rather than a Graphical User Interface. It isn&amp;rsquo;t as &amp;ldquo;User Friendly&amp;rdquo; but is extremely customisable and blazingly fast at executing commands due to its GPU accelerated nature providing a noticeable improvement in speed on some machines. It is the least polished Terminal Emulator of the three as it is still considered to be at a beta level of readiness and the developers aren&amp;rsquo;t very &amp;ldquo;friendly&amp;rdquo; to macOS as, though they provide a macOS .dmg installer you are required to jump through a few hoops in terms of allowing the software to bypass macOS&amp;rsquo; Gateway in order to run the software because it is not actually Apple notarized so it has not been certified as &amp;ldquo;Not Malware&amp;rdquo; in Apple&amp;rsquo;s eyes.&lt;/p&gt;
 &lt;p&gt;To install Alacritty you have to go about it via a slightly more &amp;ldquo;complicated&amp;rdquo; path of adding a few flags in the brew package manager command, and this is potentially less secure so take that as you will.&lt;/p&gt;
 &lt;p&gt;Installing alacritty using the &lt;a class=&#34;link&#34; href=&#34;https://brew.sh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;brew&lt;/a&gt; package manager, in my opinion one of the best package managers for macOS although that is a topic for another time.&lt;/p&gt;
@@ -320,7 +394,7 @@ You can easily find a lot of great colour schemes for the macOS Terminal over he
     &gt;https://github.com/lysyi3m/macos-terminal-themes&lt;/a&gt; it has a lot of my favourites.&lt;/p&gt;
 &lt;h4 id=&#34;linux&#34;&gt;Linux&lt;/h4&gt;
 &lt;p&gt;There is a great deal more choice in Terminal Emulators on the Linux platform, given that every Desktop Environment and or distribution has its own, I am just going to stick to the few that I know well.&lt;/p&gt;
-&lt;p&gt;Firstly, GNOME Terminal, included by default with GNOME based distros such as Ubuntu, Pop!_OS, and Fedora (and even on FreeBSD&amp;rsquo;s GNOME) is a great choice. It is quite a simplistic Terminal Emulator with all the basics that you&amp;rsquo;d expect such as Tabs, Search and keybind assingments as well as good choice in colour changing.
+&lt;p&gt;Firstly, GNOME Terminal, included by default with GNOME based distros such as Ubuntu, Pop!_OS, and Fedora (and even on FreeBSD&amp;rsquo;s GNOME) is a great choice. It is quite a simplistic Terminal Emulator with all the basics that you&amp;rsquo;d expect such as Tabs, Search and key bind assignments as well as good choice in colour changing.
 I would recommend checking out this project; &lt;a class=&#34;link&#34; href=&#34;https://gogh-co.github.io/Gogh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://gogh-co.github.io/Gogh/&lt;/a&gt; which includes most of the same colour schemes as the other, macos-terminal-themes repository but also support a variety of Linux terminal emulators such as GNOME Terminal, Pantheon Terminal, Tilix or XFCE4 Terminal, and it also supports iTerm2 on macOS.&lt;/p&gt;
 &lt;p&gt;Alacritty is also available on Linux (and FreeBSD) with much of the same features. I have my own alacritty.yml file on my Github repository; &lt;a class=&#34;link&#34; href=&#34;https://github.com/Arjdroid/Terminal-Custom-Configurator&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -367,19 +441,19 @@ I personally prefer and use Zsh due to its customisability, with a lot of plugin
         </item>
         <item>
         <title>Setting up a NAS on my Raspberry Pi</title>
-        <link>https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/</link>
+        <link>https://arjdroid.me/p/setting-up-a-nas-on-my-raspberry-pi/</link>
         <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/</guid>
-        <description>&lt;img src="https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas.jpg" alt="Featured image of post Setting up a NAS on my Raspberry Pi" /&gt;&lt;blockquote&gt;
+        <guid>https://arjdroid.me/p/setting-up-a-nas-on-my-raspberry-pi/</guid>
+        <description>&lt;img src="https://arjdroid.me/p/setting-up-a-nas-on-my-raspberry-pi/raspberrypi4nas.jpg" alt="Featured image of post Setting up a NAS on my Raspberry Pi" /&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: If you plan on using this article as a guide for setting up your OWN raspberry pi nas (which I hope you do 😁), &lt;strong&gt;PLEASE&lt;/strong&gt; read the entire article before going through with this process (It will help clear any doubts you have as well as ensure that you can go through with this process). Also, do remember that &lt;strong&gt;I AM NOT RESPONSIBLE&lt;/strong&gt; for any damage that YOU may cause to yourself or your own hardware including, but not limited to: bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed. YOU are choosing to make these modifications, and if you point the finger at me for messing up your hardware, I will laugh at you. All jokes aside though, this process is pretty solid, and shouldn&amp;rsquo;t break anything unless you &lt;em&gt;seriously&lt;/em&gt; mess it up.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;So, this project all started when my old faithful Windows PC started giving up so I had to temporarily work from my Macbook.
-It was fine for the most part except that I didn&amp;rsquo;t have access to most of the files on my 2 Terrabyte hard drive, that was a real problem because those files would&amp;rsquo;ve saved me a lot of time&amp;hellip;&lt;/p&gt;
+It was fine for the most part except that I didn&amp;rsquo;t have access to most of the files on my 2 Terabyte hard drive, that was a real problem because those files would&amp;rsquo;ve saved me a lot of time&amp;hellip;&lt;/p&gt;
 &lt;p&gt;So, my father and I decided to setup a N.A.S!&lt;/p&gt;
 &lt;p&gt;Easy right? Not really&amp;hellip;&lt;/p&gt;
-&lt;p&gt;There are a lot of options in terms of N.A.S storage devices, you could buy one of those pre-configured N.A.S boxes with their propreitary software and hardware which, if they break, you&amp;rsquo;re out of luck, they&amp;rsquo;re also often times really expensive!
+&lt;p&gt;There are a lot of options in terms of N.A.S storage devices, you could buy one of those pre-configured N.A.S boxes with their proprietary software and hardware which, if they break, you&amp;rsquo;re out of luck, they&amp;rsquo;re also often times really expensive!
 So, what better alternative to closed sources and proprietary hardware than to use open source!
 Enter: Raspberry Pi; a tiny credit card sized fully functioning computer that is great for D.I.Y projects.
 So it was decided that the Raspberry Pi4 would be the brains of the operation, N.A.S operation, at least at this small scale, isn&amp;rsquo;t a really compute heavy process so we decreed that a 2GB Model of the Raspberry Pi4 would be sufficient for the task.&lt;/p&gt;
@@ -425,7 +499,7 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 &lt;p&gt;Under the disk information, it would give &lt;code&gt;Device&lt;/code&gt; information, each &lt;code&gt;Device&lt;/code&gt; is a volume or partition on the drive, each partition is named with the name of the disk suffixed with the partition number if it is a logical primary partition.&lt;/p&gt;
 &lt;p&gt;In the sample partition I gave was &lt;code&gt;/dev/sda1&lt;/code&gt;, it is the only partition in the drive and as you can see, it&amp;rsquo;s &lt;code&gt;End&lt;/code&gt; byte is the last byte in the whole drive so it&amp;rsquo;s size encompasses the entire drive.&lt;/p&gt;
 &lt;p&gt;This is the volume that you will be mounting using as the &amp;lsquo;drive&amp;rsquo;.&lt;/p&gt;
-&lt;h3 id=&#34;incase-your-drive-is-un-initialised-doesnt-have-any-partitions--volumes-or-you-want-to-start-off-fresh&#34;&gt;Incase Your Drive Is Un-Initialised (Doesn&amp;rsquo;t Have Any Partitions / Volumes) OR You Want To Start Off Fresh&lt;/h3&gt;
+&lt;h3 id=&#34;in-case-your-drive-is-un-initialised-doesnt-have-any-partitions--volumes-or-you-want-to-start-off-fresh&#34;&gt;In case Your Drive Is Un-Initialised (Doesn&amp;rsquo;t Have Any Partitions / Volumes) OR You Want To Start Off Fresh&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Run the partition editor for that drive;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo fdisk -l /dev/sda
@@ -452,7 +526,7 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It is a good idea to recheck the name of the volume before mounting it;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo fdisk -l
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Great! Now you&amp;rsquo;ve mounted your drive!&lt;/p&gt;
-&lt;p&gt;Incase you need to unmount the drive (if you&amp;rsquo;re disconnecting the cable, PLEASE unmount before doing so.)&lt;/p&gt;
+&lt;p&gt;In case you need to unmount the drive (if you&amp;rsquo;re disconnecting the cable, PLEASE unmount before doing so.)&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo umount /dev/sda1
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;setting-up-the-smbd-samba-share-server&#34;&gt;Setting Up The SMBD (samba share) Server&lt;/h2&gt;
 &lt;p&gt;An SMBD (samba share) server allows file sharing because it appears as a network drive which can be accessed by any device on the network that is permitted to access it.&lt;/p&gt;
@@ -464,7 +538,7 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 &lt;p&gt;Now that our repositories are up to date, we can install the samba program;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install samba samba-common
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If it prompts you for anything, just say &amp;lsquo;Yes&amp;rsquo;&lt;/p&gt;
-&lt;p&gt;Now you should edit &lt;code&gt;smb.conf&lt;/code&gt;, the file that contains the samaba server configuration;&lt;/p&gt;
+&lt;p&gt;Now you should edit &lt;code&gt;smb.conf&lt;/code&gt;, the file that contains the samba server configuration;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nano /etc/samba/smb.conf
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will open up the nano text editor which will allow you to modify the &lt;code&gt;smb.conf&lt;/code&gt; file. Now, you want to go to the end of the file you can do this either with &lt;code&gt;CTRL + END&lt;/code&gt; or you can just keep spamming the down arrow key if that isn&amp;rsquo;t possible.&lt;/p&gt;
 &lt;p&gt;At the bottom of the &lt;code&gt;smb.conf&lt;/code&gt; file, you should enter the details as such;&lt;/p&gt;
@@ -474,7 +548,7 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;create &lt;span class=&#34;nv&#34;&gt;mask&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0777&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;directory &lt;span class=&#34;nv&#34;&gt;mask&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;0777&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; yes
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Remember to replace &lt;code&gt;HDD100G&lt;/code&gt; with the names that you have used. The writeable toggle is pretty self-explanatory, the create and directory mask values are values that allow all smb users to read, modify and delete the files on that drive, if you wish to set a different set of values for the masks, a quick &lt;a class=&#34;link&#34; href=&#34;&#34; &gt;insert your preffered search engine&lt;/a&gt; search should help you out, although you should know that these masks should work perfectly fine for you. The public toggle means that in your LAN, the network location will be visible under the Pi&amp;rsquo;s hostname, in this case, raspberrypi.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Remember to replace &lt;code&gt;HDD100G&lt;/code&gt; with the names that you have used. The writeable toggle is pretty self-explanatory, the create and directory mask values are values that allow all smb users to read, modify and delete the files on that drive, if you wish to set a different set of values for the masks, a quick &lt;a class=&#34;link&#34; href=&#34;&#34; &gt;insert your preferred search engine&lt;/a&gt; search should help you out, although you should know that these masks should work perfectly fine for you. The public toggle means that in your LAN, the network location will be visible under the Pi&amp;rsquo;s hostname, in this case, raspberrypi.&lt;/p&gt;
 &lt;p&gt;Now, we need to add a password for the current smb share user, in this case, pi. This username and password will allow you to access the smb share files. To add a password to the current user, pi do this;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo smbpasswd -a pi
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You can now enter the password you want to enter, this password doesn&amp;rsquo;t have to be the same password as your user password for accessing the system.&lt;/p&gt;
@@ -497,12 +571,39 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 </description>
         </item>
         <item>
+        <title>RSS</title>
+        <link>https://arjdroid.me/p/rss/</link>
+        <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
+        
+        <guid>https://arjdroid.me/p/rss/</guid>
+        <description>&lt;img src="https://arjdroid.me/p/rss/P1181064.JPG" alt="Featured image of post RSS" /&gt;&lt;blockquote&gt;
+&lt;p&gt;If you wish to subscribe to my &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/RSS&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RSS&lt;/a&gt; feed so that you may be alerted to new blog posts quickly, you may enter this as the feed&amp;rsquo;s URL:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;url = https://arjdroid.github.io/index.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+&lt;p&gt;Once you enter this as the URL for the RSS feed reader, it will automatically fetch the RSS feed from this website.&lt;/p&gt;
+&lt;p&gt;These are some of my favourite RSS feed readers (although I&amp;rsquo;m still sad that Google Reader is dead) -&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://feedly.com/i/welcome&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Feedly&lt;/a&gt; - This one has a free and paid tier but either way, it&amp;rsquo;s really convenient and accessible from almost every platform&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://tt-rss.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Tiny Tiny RSS&lt;/a&gt; - This is self-hosted (I might write a blog post on how to host it some other time) but it&amp;rsquo;s open source and heavily customisable&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://feeder.co/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Feeder&lt;/a&gt; - Very similar to the other two but more integrated with browsers via dedicated extensions, closed source&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Thanks for reading!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
         <title>An Ode To Lunch</title>
-        <link>https://arjdroid.github.io/p/an-ode-to-lunch/</link>
+        <link>https://arjdroid.me/p/an-ode-to-lunch/</link>
         <pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://arjdroid.github.io/p/an-ode-to-lunch/</guid>
-        <description>&lt;img src="https://arjdroid.github.io/p/an-ode-to-lunch/ramenoodles.jpg" alt="Featured image of post An Ode To Lunch" /&gt;&lt;p&gt;Ah, lunch.&lt;/p&gt;
+        <guid>https://arjdroid.me/p/an-ode-to-lunch/</guid>
+        <description>&lt;img src="https://arjdroid.me/p/an-ode-to-lunch/ramenoodles.jpg" alt="Featured image of post An Ode To Lunch" /&gt;&lt;p&gt;Ah, lunch.&lt;/p&gt;
 &lt;p&gt;The finest meal of the day.&lt;/p&gt;
 &lt;p&gt;What would we do without it?&lt;/p&gt;
 &lt;p&gt;Fitting snuggly in the middle of the long gap between breakfast and dinner, ensuring one isn&amp;rsquo;t famished.&lt;/p&gt;
@@ -522,11 +623,11 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
         </item>
         <item>
         <title>Life in Quarantine</title>
-        <link>https://arjdroid.github.io/p/life-in-quarantine/</link>
+        <link>https://arjdroid.me/p/life-in-quarantine/</link>
         <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
         
-        <guid>https://arjdroid.github.io/p/life-in-quarantine/</guid>
-        <description>&lt;img src="https://arjdroid.github.io/p/life-in-quarantine/forestforeground.jpg" alt="Featured image of post Life in Quarantine" /&gt;&lt;p&gt;What a bore, life has become, during these times of quarantine;&lt;/p&gt;
+        <guid>https://arjdroid.me/p/life-in-quarantine/</guid>
+        <description>&lt;img src="https://arjdroid.me/p/life-in-quarantine/forestforeground.jpg" alt="Featured image of post Life in Quarantine" /&gt;&lt;p&gt;What a bore, life has become, during these times of quarantine;&lt;/p&gt;
 &lt;p&gt;Whiling away the time, sitting at a desk, not a soul in site;&lt;/p&gt;
 &lt;p&gt;Although it is rather fortunate, for the few of us that prefer it;&lt;/p&gt;
 &lt;p&gt;Although most&amp;rsquo;d rather not be stuck at home, the alternative is most unpreferable, even to those who yearn to roam;&lt;/p&gt;
@@ -551,11 +652,11 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
         </item>
         <item>
         <title>Markdown Syntax Guide</title>
-        <link>https://arjdroid.github.io/p/markdown-syntax-guide/</link>
+        <link>https://arjdroid.me/p/markdown-syntax-guide/</link>
         <pubDate>Mon, 01 Jan 2001 00:00:00 +0000</pubDate>
         
-        <guid>https://arjdroid.github.io/p/markdown-syntax-guide/</guid>
-        <description>&lt;img src="https://arjdroid.github.io/p/markdown-syntax-guide/libraryofalexandria.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article, which was inscribed on what is known to be a scripture from the beginning of the Gregorian Calendar Time, offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme. It also serves the purpose of showing off how advanced and beautiful my website is.&lt;/p&gt;
+        <guid>https://arjdroid.me/p/markdown-syntax-guide/</guid>
+        <description>&lt;img src="https://arjdroid.me/p/markdown-syntax-guide/libraryofalexandria.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article, which was inscribed on what is known to be a scripture from the beginning of the Gregorian Calendar Time, offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme. It also serves the purpose of showing off how advanced and beautiful my website is.&lt;/p&gt;
 &lt;h2 id=&#34;headings&#34;&gt;Headings&lt;/h2&gt;
 &lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;
 &lt;h1 id=&#34;h1&#34;&gt;H1&lt;/h1&gt;
@@ -695,23 +796,6 @@ So it was decided that the Raspberry Pi4 would be the brains of the operation, N
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;
-</description>
-        </item>
-        <item>
-        <title>RSS</title>
-        <link>https://arjdroid.github.io/p/rss/</link>
-        <pubDate>Mon, 01 Jan 2001 00:00:00 +0000</pubDate>
-        
-        <guid>https://arjdroid.github.io/p/rss/</guid>
-        <description>&lt;img src="https://arjdroid.github.io/p/rss/P1181064.JPG" alt="Featured image of post RSS" /&gt;&lt;blockquote&gt;
-&lt;p&gt;If you wish to subscribe to my RSS feed so that you may be alerted to new blog posts quickly, in your RSS feed reader of choice, you may enter this as the URL at the entry for the URL of the RSS feed;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;url = https://arjdroid.github.io/index.xml
-&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-&lt;p&gt;Once you enter this as the URL for the RSS feed reader, it will automatically fetch the RSS feed from this website.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Thanks for reading!&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
 </description>
         </item>
         

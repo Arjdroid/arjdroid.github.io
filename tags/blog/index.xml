@@ -2,19 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blog on The Droid Blog</title>
-    <link>https://arjdroid.github.io/tags/blog/</link>
+    <link>https://arjdroid.me/tags/blog/</link>
     <description>Recent content in blog on The Droid Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jan 2001 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RSS</title>
-      <link>https://arjdroid.github.io/p/rss/</link>
-      <pubDate>Mon, 01 Jan 2001 00:00:00 +0000</pubDate>
+      <link>https://arjdroid.me/p/rss/</link>
+      <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://arjdroid.github.io/p/rss/</guid>
-      <description>If you wish to subscribe to my RSS feed so that you may be alerted to new blog posts quickly, in your RSS feed reader of choice, you may enter this as the URL at the entry for the URL of the RSS feed;
-url = https://arjdroid.github.io/index.xml Once you enter this as the URL for the RSS feed reader, it will automatically fetch the RSS feed from this website.</description>
+      <guid>https://arjdroid.me/p/rss/</guid>
+      <description>If you wish to subscribe to my RSS feed so that you may be alerted to new blog posts quickly, you may enter this as the feed&amp;rsquo;s URL:
+url = https://arjdroid.github.io/index.xml Once you enter this as the URL for the RSS feed reader, it will automatically fetch the RSS feed from this website.
+These are some of my favourite RSS feed readers (although I&amp;rsquo;m still sad that Google Reader is dead) -</description>
     </item>
     
   </channel>

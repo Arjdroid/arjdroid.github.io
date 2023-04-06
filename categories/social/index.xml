@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>social on The Droid Blog</title>
+    <link>https://arjdroid.me/categories/social/</link>
+    <description>Recent content in social on The Droid Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/categories/social/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Participating in a 24 hour hackathon</title>
+      <link>https://arjdroid.me/p/participating-in-a-24-hour-hackathon/</link>
+      <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://arjdroid.me/p/participating-in-a-24-hour-hackathon/</guid>
+      <description>Introduction A little over a month ago, I decided to participate in an upcoming hackathon. For those not in the know, a hackathon, sometimes also called a codefest, is an event where people work in teams to rapidly develop a product within a set time limit. They can come in the form of a competition where the goal is for one team to win, or, when hosted by a company, to complete the implementation of a feature in their product.</description>
+    </item>
+    
+  </channel>
+</rss>

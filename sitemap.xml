@@ -2,139 +2,154 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://arjdroid.github.io/categories/</loc>
+    <loc>https://arjdroid.me/categories/</loc>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/tags/hackathon/</loc>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/p/participating-in-a-24-hour-hackathon/</loc>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/post/</loc>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/tags/programming/</loc>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/categories/programming/</loc>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/categories/social/</loc>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/tags/</loc>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/</loc>
+    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/tags/gaming/</loc>
     <lastmod>2022-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/gaming/</loc>
+    <loc>https://arjdroid.me/categories/gaming/</loc>
     <lastmod>2022-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/categories/gaming/</loc>
+    <loc>https://arjdroid.me/tags/homelab/</loc>
     <lastmod>2022-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/homelab/</loc>
+    <loc>https://arjdroid.me/categories/homelab/</loc>
     <lastmod>2022-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/categories/homelab/</loc>
+    <loc>https://arjdroid.me/p/hosting-my-own-minecraft-server-with-docker-on-linux/</loc>
     <lastmod>2022-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/p/hosting-my-own-minecraft-server-with-docker-on-linux/</loc>
+    <loc>https://arjdroid.me/tags/minecraft/</loc>
     <lastmod>2022-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/minecraft/</loc>
+    <loc>https://arjdroid.me/tags/networking/</loc>
     <lastmod>2022-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/networking/</loc>
+    <loc>https://arjdroid.me/categories/networking/</loc>
     <lastmod>2022-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/categories/networking/</loc>
-    <lastmod>2022-06-09T00:00:00+00:00</lastmod>
+    <loc>https://arjdroid.me/tags/commandline/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/post/</loc>
-    <lastmod>2022-06-09T00:00:00+00:00</lastmod>
+    <loc>https://arjdroid.me/categories/commandline/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/</loc>
-    <lastmod>2022-06-09T00:00:00+00:00</lastmod>
+    <loc>https://arjdroid.me/p/customising-a-unix-terminal/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/</loc>
+    <loc>https://arjdroid.me/tags/guide/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/categories/guide/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/tags/powerusers/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/categories/powerusers/</loc>
+    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/about/</loc>
     <lastmod>2022-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/commandline/</loc>
-    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.github.io/categories/commandline/</loc>
-    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.github.io/p/customising-a-unix-terminal/</loc>
-    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.github.io/tags/guide/</loc>
-    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.github.io/categories/guide/</loc>
-    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.github.io/tags/powerusers/</loc>
-    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.github.io/categories/powerusers/</loc>
-    <lastmod>2022-05-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.github.io/about/</loc>
+    <loc>https://arjdroid.me/page/</loc>
     <lastmod>2022-06-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/page/</loc>
-    <lastmod>2022-06-21T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.github.io/tags/raspberrypi/</loc>
+    <loc>https://arjdroid.me/tags/raspberrypi/</loc>
     <lastmod>2020-10-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/categories/raspberrypi/</loc>
+    <loc>https://arjdroid.me/categories/raspberrypi/</loc>
     <lastmod>2020-10-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/p/setting-up-a-nas-on-my-raspberry-pi/</loc>
+    <loc>https://arjdroid.me/p/setting-up-a-nas-on-my-raspberry-pi/</loc>
     <lastmod>2020-10-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/p/an-ode-to-lunch/</loc>
+    <loc>https://arjdroid.me/tags/blog/</loc>
+    <lastmod>2020-10-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/categories/blog/</loc>
+    <lastmod>2020-10-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/tags/rss/</loc>
+    <lastmod>2020-10-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/p/rss/</loc>
+    <lastmod>2020-10-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/categories/syntax/</loc>
+    <lastmod>2020-10-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/p/an-ode-to-lunch/</loc>
     <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/food/</loc>
+    <loc>https://arjdroid.me/tags/food/</loc>
     <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/categories/food/</loc>
+    <loc>https://arjdroid.me/categories/food/</loc>
     <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/poem/</loc>
+    <loc>https://arjdroid.me/tags/poem/</loc>
     <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/categories/poem/</loc>
+    <loc>https://arjdroid.me/categories/poem/</loc>
     <lastmod>2020-10-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/life/</loc>
+    <loc>https://arjdroid.me/tags/life/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/categories/life/</loc>
+    <loc>https://arjdroid.me/categories/life/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/p/life-in-quarantine/</loc>
+    <loc>https://arjdroid.me/p/life-in-quarantine/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/quarantine/</loc>
+    <loc>https://arjdroid.me/tags/quarantine/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/categories/quarantine/</loc>
+    <loc>https://arjdroid.me/categories/quarantine/</loc>
     <lastmod>2020-10-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/blog/</loc>
+    <loc>https://arjdroid.me/tags/css/</loc>
     <lastmod>2001-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/categories/blog/</loc>
+    <loc>https://arjdroid.me/tags/html/</loc>
     <lastmod>2001-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/css/</loc>
+    <loc>https://arjdroid.me/tags/markdown/</loc>
     <lastmod>2001-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/html/</loc>
+    <loc>https://arjdroid.me/p/markdown-syntax-guide/</loc>
     <lastmod>2001-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/tags/markdown/</loc>
+    <loc>https://arjdroid.me/tags/themes/</loc>
     <lastmod>2001-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://arjdroid.github.io/p/markdown-syntax-guide/</loc>
-    <lastmod>2001-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.github.io/tags/rss/</loc>
-    <lastmod>2001-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.github.io/p/rss/</loc>
-    <lastmod>2001-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.github.io/categories/syntax/</loc>
-    <lastmod>2001-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.github.io/tags/themes/</loc>
-    <lastmod>2001-01-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.github.io/categories/themes/</loc>
+    <loc>https://arjdroid.me/categories/themes/</loc>
     <lastmod>2001-01-01T00:00:00+00:00</lastmod>
   </url>
 </urlset>
