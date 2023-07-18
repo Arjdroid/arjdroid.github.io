@@ -7,12 +7,12 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Mon, 23 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Participating in a 24 hour hackathon</title>
-        <link>https://arjdroid.me/p/participating-in-a-24-hour-hackathon/</link>
+        <title>Participating in a 24 hour hackathon (Part 1)</title>
+        <link>https://arjdroid.me/p/participating-in-a-24-hour-hackathon-part-1/</link>
         <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://arjdroid.me/p/participating-in-a-24-hour-hackathon/</guid>
-        <description>&lt;img src="https://arjdroid.me/p/participating-in-a-24-hour-hackathon/coverphoto.jpg" alt="Featured image of post Participating in a 24 hour hackathon" /&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+        <guid>https://arjdroid.me/p/participating-in-a-24-hour-hackathon-part-1/</guid>
+        <description>&lt;img src="https://arjdroid.me/p/participating-in-a-24-hour-hackathon-part-1/coverphoto.jpg" alt="Featured image of post Participating in a 24 hour hackathon (Part 1)" /&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;A little over a month ago, I decided to participate in an upcoming hackathon. For those not in the know, a &lt;a class=&#34;link&#34; href=&#34;https://en.wikipedia.org/wiki/Hackathon&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;hackathon&lt;/a&gt;, sometimes also called a codefest, is an event where people work in teams to rapidly develop a product within a set time limit. They can come in the form of a competition where the goal is for one team to win, or, when hosted by a company, to complete the implementation of a feature in their product.&lt;/p&gt;
 &lt;p&gt;They are usually 24 hours continuous, but some can span to two or three days.&lt;/p&gt;
