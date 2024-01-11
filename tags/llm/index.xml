@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>llm on The Droid Blog</title>
+    <link>https://arjdroid.me/tags/llm/</link>
+    <description>Recent content in llm on The Droid Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 11 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://arjdroid.me/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running a Local Large Language Model (AKA Local AI ChatBot) PART ONE</title>
+      <link>https://arjdroid.me/p/running-a-local-large-language-model-aka-local-ai-chatbot-part-one/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://arjdroid.me/p/running-a-local-large-language-model-aka-local-ai-chatbot-part-one/</guid>
+      <description>Introduction I&amp;rsquo;m sure that over the past year you&amp;rsquo;ve heard a LOT about AI, ChatGPT, and maybe something called a Large Language Model.&#xA;Well, the underlying technique with which we&amp;rsquo;ve had a lot of recent advances in AI, resulting in the offerring of such powerful tools like ChatGPT, Perplexity, etc. has been the Large Language Model.&#xA;If you&amp;rsquo;re really curious, and have the time (~1 hour) to really get down to some details about how these models work and how we use them, I highly recommend you watch this YouTube Video</description>
+    </item>
+  </channel>
+</rss>

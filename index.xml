@@ -6,7 +6,78 @@
         <description>Recent content on The Droid Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 23 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 11 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Running a Local Large Language Model (AKA Local AI ChatBot) PART ONE</title>
+        <link>https://arjdroid.me/p/running-a-local-large-language-model-aka-local-ai-chatbot-part-one/</link>
+        <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://arjdroid.me/p/running-a-local-large-language-model-aka-local-ai-chatbot-part-one/</guid>
+        <description>&lt;img src="https://arjdroid.me/p/running-a-local-large-language-model-aka-local-ai-chatbot-part-one/llama2-on-mac.png" alt="Featured image of post Running a Local Large Language Model (AKA Local AI ChatBot) PART ONE" /&gt;&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m sure that over the past year you&amp;rsquo;ve heard a &lt;em&gt;LOT&lt;/em&gt; about AI, ChatGPT, and maybe something called a Large Language Model.&lt;/p&gt;
+&lt;p&gt;Well, the underlying technique with which we&amp;rsquo;ve had a lot of recent advances in AI, resulting in the offerring of such powerful tools like &lt;a class=&#34;link&#34; href=&#34;https://chat.openai.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ChatGPT&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://perplexity.ai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Perplexity&lt;/a&gt;, etc. has been the Large Language Model.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re really curious, and have the time (~1 hour) to really get down to some details about how these models work and how we use them, I &lt;em&gt;highly&lt;/em&gt; recommend you watch this &lt;a class=&#34;link&#34; href=&#34;https://youtu.be/zjkBMFhNj_g?si=AHkn0iOyrgwREBNK&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;YouTube Video&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Additionally, you can also watch the Royal Institute&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=b76gsOSkHB4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;video&lt;/a&gt; which is more of a general opener rather than very many technical details.&lt;/p&gt;
+&lt;p&gt;However, in today&amp;rsquo;s blog post we&amp;rsquo;re just jumping straight into how we can get started actually running some models on our very own systems!&lt;/p&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A computer running either Linux or macOS (Windows users have other options not covered in this Blog Post)&lt;/li&gt;
+&lt;li&gt;Decent hardware (It says at least 8GB RAM to run the smallest models), but you can also expand by having more RAM, faster CPUs and a discreteGPU
+&lt;ul&gt;
+&lt;li&gt;In this post I&amp;rsquo;m demonstrating it on an M1 MacBook Air, so anything in that ballpark or faster should be good to run the most basic stuff.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;A lot of storage available, at least 50GB to be comfortable&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For this demonstration, I am showing &lt;code&gt;ollama&lt;/code&gt; running on an Apple M1 MacBook Air with an 8 core CPU, 8 core GPU, 16GB RAM and 512GB of Storage.&lt;/p&gt;
+&lt;p&gt;I have also tested &lt;code&gt;ollama&lt;/code&gt; running on a Fedora Linux system with 16GB RAM, an AMD Ryzen 7 3700X, and an Nvidia GeForce RTX 3070 with 8 GB VRAM. Future blog posts will be on this system.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;starting-off&#34;&gt;Starting Off&lt;/h2&gt;
+&lt;p&gt;For this project I&amp;rsquo;m going to be using the &lt;a class=&#34;link&#34; href=&#34;https://ollama.ai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ollama&lt;/a&gt; tool. It makes the whole thing &lt;em&gt;very&lt;/em&gt; simple, because it&amp;rsquo;s almost plug and play, while still allowing you to have a lot of control and customisation.&lt;/p&gt;
+&lt;p&gt;It supports GPU acceleration (if you have it), running a local API (so that you can use the model with a GUI interface instead of the command line), etc.&lt;/p&gt;
+&lt;p&gt;And the best thing? It&amp;rsquo;s completely open source!&lt;/p&gt;
+&lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
+&lt;p&gt;You can go to the ollama website &lt;a class=&#34;link&#34; href=&#34;https://ollamai.ai&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://ollamai.ai&lt;/a&gt; or their GitHub &lt;a class=&#34;link&#34; href=&#34;https://github.com/jmorganca/ollama&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/jmorganca/ollama&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And follow the basic instructions from there&lt;/p&gt;
+&lt;p&gt;On a Mac, it&amp;rsquo;s quite simple as you just need to install their Application file (which has been Apple Notarised so there&amp;rsquo;s less worry about sketchy software too) and then you have access to the &lt;code&gt;ollama&lt;/code&gt; command in your terminal.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: you do have to trust the application and give it administrator / root access&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Once you&amp;rsquo;ve done that, you&amp;rsquo;re ready to go!&lt;/p&gt;
+&lt;p&gt;They recommend you start off with the base, 7 billion parameter &lt;code&gt;llama2&lt;/code&gt; model and you can do that with:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ollama run llama2&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;And there you have it! You can talk to it, ask it questions, even write some code.&lt;/p&gt;
+&lt;p&gt;However, once you eventually get bored with that, you should start looking at other models, with different purposes.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;d suggest taking a look at &lt;code&gt;mistral&lt;/code&gt; as it&amp;rsquo;s similarly lightweight and quite responsive, as well as &lt;em&gt;so many more!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;You can check out the &lt;a class=&#34;link&#34; href=&#34;https://ollama.ai/library&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ollama library&lt;/a&gt; to see all sorts of different options. But remember, larger models require more RAM and or more VRAM to run.&lt;/p&gt;
+&lt;h3 id=&#34;tidbits&#34;&gt;Tidbits&lt;/h3&gt;
+&lt;p&gt;I pasted all the above contents of the blog post into the llama2 model and asked it to conclude the post, here&amp;rsquo;s what it said:&lt;/p&gt;
+&lt;p&gt;Running a local LLM can offer several advantages, such as faster response times, greater
+control over the model&amp;rsquo;s training data, and reduced latency compared to using cloud-based
+models. By running our own LLMs, we can also explore new use cases and applications that are
+not yet possible with existing models.&lt;/p&gt;
+&lt;p&gt;Pretty good!&lt;/p&gt;
+&lt;h2 id=&#34;up-next&#34;&gt;Up Next&lt;/h2&gt;
+&lt;p&gt;Right now, I&amp;rsquo;m on a delivery of new RAM modules to upgrade my PC so that I can run larger models like &lt;code&gt;mixtral&lt;/code&gt; and &lt;code&gt;llama2:70b&lt;/code&gt; as they promise to be a lot more powerful.&lt;/p&gt;
+&lt;p&gt;Upcoming blog posts in this series will detail the differences between these kinds of models, as well as some more exploration like setting up a nice web ui to interface with them more comfortably and from more devices on the network!&lt;/p&gt;
+&lt;p&gt;I also want to learn about different kinds of tests they use to evaluate the performance of these models and run them myself to compare the results.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;See you next time&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
         <title>Participating in a 24 hour hackathon (Part 1)</title>
         <link>https://arjdroid.me/p/participating-in-a-24-hour-hackathon-part-1/</link>
         <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>

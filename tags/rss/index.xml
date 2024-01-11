@@ -6,17 +6,14 @@
     <description>Recent content in rss on The Droid Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/tags/rss/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://arjdroid.me/tags/rss/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RSS</title>
       <link>https://arjdroid.me/p/rss/</link>
       <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/p/rss/</guid>
-      <description>If you wish to subscribe to my RSS feed so that you may be alerted to new blog posts quickly, you may enter this as the feed&amp;rsquo;s URL:
-url = https://arjdroid.github.io/index.xml Once you enter this as the URL for the RSS feed reader, it will automatically fetch the RSS feed from this website.
-These are some of my favourite RSS feed readers (although I&amp;rsquo;m still sad that Google Reader is dead) -</description>
+      <description>If you wish to subscribe to my RSS feed so that you may be alerted to new blog posts quickly, you may enter this as the feed&amp;rsquo;s URL:&#xA;url = https://arjdroid.github.io/index.xml Once you enter this as the URL for the RSS feed reader, it will automatically fetch the RSS feed from this website.&#xA;These are some of my favourite RSS feed readers (although I&amp;rsquo;m still sad that Google Reader is dead) -</description>
     </item>
-    
   </channel>
 </rss>

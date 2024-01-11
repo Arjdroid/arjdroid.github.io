@@ -2,16 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://arjdroid.me/tags/ai/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/categories/ai/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://arjdroid.me/categories/</loc>
-    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/tags/gpt/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/tags/llm/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/post/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/p/running-a-local-large-language-model-aka-local-ai-chatbot-part-one/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/tags/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/categories/technical/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://arjdroid.me/</loc>
+    <lastmod>2024-01-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://arjdroid.me/tags/hackathon/</loc>
     <lastmod>2023-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://arjdroid.me/p/participating-in-a-24-hour-hackathon-part-1/</loc>
-    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.me/post/</loc>
     <lastmod>2023-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://arjdroid.me/tags/programming/</loc>
@@ -21,12 +45,6 @@
     <lastmod>2023-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://arjdroid.me/categories/social/</loc>
-    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.me/tags/</loc>
-    <lastmod>2023-01-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://arjdroid.me/</loc>
     <lastmod>2023-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://arjdroid.me/tags/gaming/</loc>

@@ -6,150 +6,133 @@
     <description>Recent content in Categories on The Droid Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://arjdroid.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ai</title>
+      <link>https://arjdroid.me/categories/ai/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://arjdroid.me/categories/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>technical</title>
+      <link>https://arjdroid.me/categories/technical/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://arjdroid.me/categories/technical/</guid>
+      <description></description>
+    </item>
     <item>
       <title>programming</title>
       <link>https://arjdroid.me/categories/programming/</link>
       <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/programming/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>social</title>
       <link>https://arjdroid.me/categories/social/</link>
       <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/social/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>gaming</title>
       <link>https://arjdroid.me/categories/gaming/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/gaming/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>homelab</title>
       <link>https://arjdroid.me/categories/homelab/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/homelab/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>networking</title>
       <link>https://arjdroid.me/categories/networking/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/networking/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>commandline</title>
       <link>https://arjdroid.me/categories/commandline/</link>
       <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/commandline/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>guide</title>
       <link>https://arjdroid.me/categories/guide/</link>
       <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/guide/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>powerusers</title>
       <link>https://arjdroid.me/categories/powerusers/</link>
       <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/powerusers/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>raspberrypi</title>
       <link>https://arjdroid.me/categories/raspberrypi/</link>
       <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/raspberrypi/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>blog</title>
       <link>https://arjdroid.me/categories/blog/</link>
       <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/blog/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>syntax</title>
       <link>https://arjdroid.me/categories/syntax/</link>
       <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/syntax/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>food</title>
       <link>https://arjdroid.me/categories/food/</link>
       <pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/food/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>poem</title>
       <link>https://arjdroid.me/categories/poem/</link>
       <pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/poem/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>life</title>
       <link>https://arjdroid.me/categories/life/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/life/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>quarantine</title>
       <link>https://arjdroid.me/categories/quarantine/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/quarantine/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>themes</title>
       <link>https://arjdroid.me/categories/themes/</link>
       <pubDate>Mon, 01 Jan 2001 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/categories/themes/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

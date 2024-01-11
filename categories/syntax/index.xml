@@ -6,27 +6,21 @@
     <description>Recent content in syntax on The Droid Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/categories/syntax/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://arjdroid.me/categories/syntax/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RSS</title>
       <link>https://arjdroid.me/p/rss/</link>
       <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/p/rss/</guid>
-      <description>If you wish to subscribe to my RSS feed so that you may be alerted to new blog posts quickly, you may enter this as the feed&amp;rsquo;s URL:
-url = https://arjdroid.github.io/index.xml Once you enter this as the URL for the RSS feed reader, it will automatically fetch the RSS feed from this website.
-These are some of my favourite RSS feed readers (although I&amp;rsquo;m still sad that Google Reader is dead) -</description>
+      <description>If you wish to subscribe to my RSS feed so that you may be alerted to new blog posts quickly, you may enter this as the feed&amp;rsquo;s URL:&#xA;url = https://arjdroid.github.io/index.xml Once you enter this as the URL for the RSS feed reader, it will automatically fetch the RSS feed from this website.&#xA;These are some of my favourite RSS feed readers (although I&amp;rsquo;m still sad that Google Reader is dead) -</description>
     </item>
-    
     <item>
       <title>Markdown Syntax Guide</title>
       <link>https://arjdroid.me/p/markdown-syntax-guide/</link>
       <pubDate>Mon, 01 Jan 2001 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/p/markdown-syntax-guide/</guid>
-      <description>This article, which was inscribed on what is known to be a scripture from the beginning of the Gregorian Calendar Time, offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme. It also serves the purpose of showing off how advanced and beautiful my website is.
-Headings The following HTML &amp;lt;h1&amp;gt;—&amp;lt;h6&amp;gt; elements represent six levels of section headings.</description>
+      <description>This article, which was inscribed on what is known to be a scripture from the beginning of the Gregorian Calendar Time, offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme. It also serves the purpose of showing off how advanced and beautiful my website is.&#xA;Headings The following HTML &amp;lt;h1&amp;gt;—&amp;lt;h6&amp;gt; elements represent six levels of section headings.</description>
     </item>
-    
   </channel>
 </rss>

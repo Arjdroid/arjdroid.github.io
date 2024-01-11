@@ -6,91 +6,70 @@
     <description>Recent content in Posts on The Droid Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 11 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://arjdroid.me/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running a Local Large Language Model (AKA Local AI ChatBot) PART ONE</title>
+      <link>https://arjdroid.me/p/running-a-local-large-language-model-aka-local-ai-chatbot-part-one/</link>
+      <pubDate>Thu, 11 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://arjdroid.me/p/running-a-local-large-language-model-aka-local-ai-chatbot-part-one/</guid>
+      <description>Introduction I&amp;rsquo;m sure that over the past year you&amp;rsquo;ve heard a LOT about AI, ChatGPT, and maybe something called a Large Language Model.&#xA;Well, the underlying technique with which we&amp;rsquo;ve had a lot of recent advances in AI, resulting in the offerring of such powerful tools like ChatGPT, Perplexity, etc. has been the Large Language Model.&#xA;If you&amp;rsquo;re really curious, and have the time (~1 hour) to really get down to some details about how these models work and how we use them, I highly recommend you watch this YouTube Video</description>
+    </item>
     <item>
       <title>Participating in a 24 hour hackathon (Part 1)</title>
       <link>https://arjdroid.me/p/participating-in-a-24-hour-hackathon-part-1/</link>
       <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/p/participating-in-a-24-hour-hackathon-part-1/</guid>
       <description>Introduction A little over a month ago, I decided to participate in an upcoming hackathon. For those not in the know, a hackathon, sometimes also called a codefest, is an event where people work in teams to rapidly develop a product within a set time limit. They can come in the form of a competition where the goal is for one team to win, or, when hosted by a company, to complete the implementation of a feature in their product.</description>
     </item>
-    
     <item>
       <title>Hosting my own Minecraft Server with Docker on Linux</title>
       <link>https://arjdroid.me/p/hosting-my-own-minecraft-server-with-docker-on-linux/</link>
       <pubDate>Thu, 09 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/p/hosting-my-own-minecraft-server-with-docker-on-linux/</guid>
       <description>Disclaimer: This guide is a general overview, please also do additional research before following. If you plan on using this article as a guide for setting up your OWN Minecraft (Java Edition) server, PLEASE read the entire article before going through with this process (It may help clear any doubts you have as well as ensure that you can go through with this process). Also, do remember that I AM NOT RESPONSIBLE for any damage that YOU may cause to yourself or your own hardware including, but not limited to: bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed.</description>
     </item>
-    
     <item>
       <title>Customising a UNIX Terminal</title>
       <link>https://arjdroid.me/p/customising-a-unix-terminal/</link>
       <pubDate>Thu, 12 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/p/customising-a-unix-terminal/</guid>
-      <description>Introduction When you spend a lot of your time working on a command line interface, it&amp;rsquo;s pretty important (at least for me) to make sure that you like how your command line looks and that it is an efficient environment that can boost your productivity in your command line workflow.
-A customised terminal is unique and brings the personality of the user into the console, highlighting what the user thinks is important, as well as bringing in a little style to stand out from the boring black and white terminals with a single dollar sign line indicator.</description>
+      <description>Introduction When you spend a lot of your time working on a command line interface, it&amp;rsquo;s pretty important (at least for me) to make sure that you like how your command line looks and that it is an efficient environment that can boost your productivity in your command line workflow.&#xA;A customised terminal is unique and brings the personality of the user into the console, highlighting what the user thinks is important, as well as bringing in a little style to stand out from the boring black and white terminals with a single dollar sign line indicator.</description>
     </item>
-    
     <item>
       <title>Setting up a NAS on my Raspberry Pi</title>
       <link>https://arjdroid.me/p/setting-up-a-nas-on-my-raspberry-pi/</link>
       <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/p/setting-up-a-nas-on-my-raspberry-pi/</guid>
       <description>Disclaimer: If you plan on using this article as a guide for setting up your OWN raspberry pi nas (which I hope you do 😁), PLEASE read the entire article before going through with this process (It will help clear any doubts you have as well as ensure that you can go through with this process). Also, do remember that I AM NOT RESPONSIBLE for any damage that YOU may cause to yourself or your own hardware including, but not limited to: bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed.</description>
     </item>
-    
     <item>
       <title>RSS</title>
       <link>https://arjdroid.me/p/rss/</link>
       <pubDate>Tue, 06 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/p/rss/</guid>
-      <description>If you wish to subscribe to my RSS feed so that you may be alerted to new blog posts quickly, you may enter this as the feed&amp;rsquo;s URL:
-url = https://arjdroid.github.io/index.xml Once you enter this as the URL for the RSS feed reader, it will automatically fetch the RSS feed from this website.
-These are some of my favourite RSS feed readers (although I&amp;rsquo;m still sad that Google Reader is dead) -</description>
+      <description>If you wish to subscribe to my RSS feed so that you may be alerted to new blog posts quickly, you may enter this as the feed&amp;rsquo;s URL:&#xA;url = https://arjdroid.github.io/index.xml Once you enter this as the URL for the RSS feed reader, it will automatically fetch the RSS feed from this website.&#xA;These are some of my favourite RSS feed readers (although I&amp;rsquo;m still sad that Google Reader is dead) -</description>
     </item>
-    
     <item>
       <title>An Ode To Lunch</title>
       <link>https://arjdroid.me/p/an-ode-to-lunch/</link>
       <pubDate>Sun, 04 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/p/an-ode-to-lunch/</guid>
-      <description>Ah, lunch.
-The finest meal of the day.
-What would we do without it?
-Fitting snuggly in the middle of the long gap between breakfast and dinner, ensuring one isn&amp;rsquo;t famished.
-Lunch, the meal that we enjoy basking in the brightest light of the day, the Sun blessing the Earth.
-Lunch is the meal that brings people together, where guests visit for lunch before leaving to return home for dinner.</description>
+      <description>Ah, lunch.&#xA;The finest meal of the day.&#xA;What would we do without it?&#xA;Fitting snuggly in the middle of the long gap between breakfast and dinner, ensuring one isn&amp;rsquo;t famished.&#xA;Lunch, the meal that we enjoy basking in the brightest light of the day, the Sun blessing the Earth.&#xA;Lunch is the meal that brings people together, where guests visit for lunch before leaving to return home for dinner.</description>
     </item>
-    
     <item>
       <title>Life in Quarantine</title>
       <link>https://arjdroid.me/p/life-in-quarantine/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/p/life-in-quarantine/</guid>
-      <description>What a bore, life has become, during these times of quarantine;
-Whiling away the time, sitting at a desk, not a soul in site;
-Although it is rather fortunate, for the few of us that prefer it;
-Although most&amp;rsquo;d rather not be stuck at home, the alternative is most unpreferable, even to those who yearn to roam;
-For the virus is spreading and killing at large, without a care for whom it smites, it strikes with no prejudice;</description>
+      <description>What a bore, life has become, during these times of quarantine;&#xA;Whiling away the time, sitting at a desk, not a soul in site;&#xA;Although it is rather fortunate, for the few of us that prefer it;&#xA;Although most&amp;rsquo;d rather not be stuck at home, the alternative is most unpreferable, even to those who yearn to roam;&#xA;For the virus is spreading and killing at large, without a care for whom it smites, it strikes with no prejudice;</description>
     </item>
-    
     <item>
       <title>Markdown Syntax Guide</title>
       <link>https://arjdroid.me/p/markdown-syntax-guide/</link>
       <pubDate>Mon, 01 Jan 2001 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/p/markdown-syntax-guide/</guid>
-      <description>This article, which was inscribed on what is known to be a scripture from the beginning of the Gregorian Calendar Time, offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme. It also serves the purpose of showing off how advanced and beautiful my website is.
-Headings The following HTML &amp;lt;h1&amp;gt;—&amp;lt;h6&amp;gt; elements represent six levels of section headings.</description>
+      <description>This article, which was inscribed on what is known to be a scripture from the beginning of the Gregorian Calendar Time, offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme. It also serves the purpose of showing off how advanced and beautiful my website is.&#xA;Headings The following HTML &amp;lt;h1&amp;gt;—&amp;lt;h6&amp;gt; elements represent six levels of section headings.</description>
     </item>
-    
   </channel>
 </rss>

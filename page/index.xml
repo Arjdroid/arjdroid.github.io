@@ -6,18 +6,14 @@
     <description>Recent content in Pages on The Droid Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/page/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://arjdroid.me/page/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://arjdroid.me/about/</link>
       <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/about/</guid>
-      <description>About Me I am Arjun, the maker/owner of this blog.
-I like almost all things computer related, and am a big fan of open-source technologies. I also like other things like playing videogames, doing sports (mostly Basketball these days), eating food, travelling, reading, photography and hanging out with my friends.
-Additionally, I am a licensed ham radio operator in my home country, India. My callsign (restricted grade) is VU3EWS.
-My Favourite Foods (All Vegetarian) and Videogames Foods Videogames Pizza Minecraft Ramen - with Tofu TES V: Skyrim Pasta Halo (Entire Series) Burgers Forza Horizon (Entire Series) About The Website This website is built using Hugo, a relatively simple, open-source engine for building great static HTML websites.</description>
+      <description>About Me I am Arjun, the maker/owner of this blog.&#xA;I like almost all things computer related, and am a big fan of open-source technologies. I also like other things like playing videogames, doing sports (mostly Basketball these days), eating food, travelling, reading, photography and hanging out with my friends.&#xA;Additionally, I am a licensed ham radio operator in my home country, India. My callsign (restricted grade) is VU3EWS.&#xA;My Favourite Foods (All Vegetarian) and Videogames Foods Videogames Pizza Minecraft Ramen - with Tofu TES V: Skyrim Pasta Halo (Entire Series) Burgers Forza Horizon (Entire Series) About The Website This website is built using Hugo, a relatively simple, open-source engine for building great static HTML websites.</description>
     </item>
-    
   </channel>
 </rss>

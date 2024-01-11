@@ -6,15 +6,14 @@
     <description>Recent content in raspberrypi on The Droid Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://arjdroid.me/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://arjdroid.me/tags/raspberrypi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Setting up a NAS on my Raspberry Pi</title>
       <link>https://arjdroid.me/p/setting-up-a-nas-on-my-raspberry-pi/</link>
       <pubDate>Fri, 23 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://arjdroid.me/p/setting-up-a-nas-on-my-raspberry-pi/</guid>
       <description>Disclaimer: If you plan on using this article as a guide for setting up your OWN raspberry pi nas (which I hope you do 😁), PLEASE read the entire article before going through with this process (It will help clear any doubts you have as well as ensure that you can go through with this process). Also, do remember that I AM NOT RESPONSIBLE for any damage that YOU may cause to yourself or your own hardware including, but not limited to: bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed.</description>
     </item>
-    
   </channel>
 </rss>
